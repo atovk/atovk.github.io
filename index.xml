@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>@EchoSence</title>
+    <link>https://atovk.github.io/</link>
+    <description>Recent content on @EchoSence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://atovk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://atovk.github.io/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/about/</guid>
+      <description>ABOUT : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Main { void log() { System.out.print(&amp;#34; |=================================================================| |# ABOUT | | * 记录日常 | | * 温故知新 | | * 不能被记录的一定会被时间带走 | | | |# ... | | | | | |=================================================================| &amp;#34;);</description>
+    </item>
+    
+    <item>
+      <title>2018 总结</title>
+      <link>https://atovk.github.io/post/summary/2018-summary/</link>
+      <pubDate>Sun, 20 Jan 2019 00:52:59 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/summary/2018-summary/</guid>
+      <description>2019 FLAG 🚩 2018 明明知道自己要干什么，却时而缺乏执行能力，2019强化自我执行能力，学会规划，养成阅读习惯，自我记录与思考； 考研 这是一年后的又一次尝</description>
+    </item>
+    
+  </channel>
+</rss>
