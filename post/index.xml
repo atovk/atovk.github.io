@@ -30,5 +30,14 @@
       <description>2019 FLAG 🚩 2018 明明知道自己要干什么，却时而缺乏执行能力，2019强化自我执行能力，学会规划，养成阅读习惯，自我记录与思考； 考研 这是一年后的又一次尝</description>
     </item>
     
+    <item>
+      <title>ubuntu18.xx 中修改 mysql 数据库默认字符编码</title>
+      <link>https://atovk.github.io/post/mysql/modify_ubuntu18_mysql_default_character_to_utf8/</link>
+      <pubDate>Sun, 20 Jan 2019 00:52:59 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/mysql/modify_ubuntu18_mysql_default_character_to_utf8/</guid>
+      <description>ubuntu18.xx 中修改 mysql 数据库默认字符编码 今天更换meriadb 为mysql 之后发现 springboot jpa存入数据库中的字符是乱码，看了下问题为mysql字符编码不是 u</description>
+    </item>
+    
   </channel>
 </rss>
