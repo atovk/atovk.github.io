@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 May 2019 23:50:26 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,7 +18,25 @@
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
       <guid>https://atovk.github.io/about/</guid>
-      <description>ABOUT : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Main { void log() { System.out.print(&amp;#34; |=================================================================| |# ABOUT | | * 记录日常 | | * 温故知新 | | * 不能被记录的一定会被时间带走 | | | |# ... | | | | | |=================================================================| &amp;#34;);</description>
+      <description>ablut 记录 跬步千里</description>
+    </item>
+    
+    <item>
+      <title>Vim Keyboard Shortcuts Cheatsheet</title>
+      <link>https://atovk.github.io/post/linux/vim-keyboard-shortcuts-cheatsheet/</link>
+      <pubDate>Fri, 31 May 2019 23:50:26 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/linux/vim-keyboard-shortcuts-cheatsheet/</guid>
+      <description>VIM 基本速查表 COPY BY vim-keyboard-shortcuts-cheatsheet 基本操作 快捷键 功能 Esc 从当前模式转换到“普通模式”。所有的键对应到命令。 i “插入模式”用于插入文字。回归按键的本职工作。 : “</description>
+    </item>
+    
+    <item>
+      <title>批量删除HDFS上无效的临时文件/ Batch delete hdfs dir</title>
+      <link>https://atovk.github.io/post/bigdata/batch_delete_hdfs_dir/</link>
+      <pubDate>Fri, 31 May 2019 23:46:56 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/bigdata/batch_delete_hdfs_dir/</guid>
+      <description>批量删除HDFS上无效的临时文件 1 需求：当前日期下的临时目录不删除（可能存在正在运行的临时文件），通过日期过滤dir将非当前日期的dir进行</description>
     </item>
     
     <item>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on @EchoSence</title>
+    <link>https://atovk.github.io/tags/vim/</link>
+    <description>Recent content in vim on @EchoSence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ATOVK</copyright>
+    <lastBuildDate>Fri, 31 May 2019 23:50:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://atovk.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vim Keyboard Shortcuts Cheatsheet</title>
+      <link>https://atovk.github.io/post/linux/vim-keyboard-shortcuts-cheatsheet/</link>
+      <pubDate>Fri, 31 May 2019 23:50:26 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/linux/vim-keyboard-shortcuts-cheatsheet/</guid>
+      <description>VIM 基本速查表 COPY BY vim-keyboard-shortcuts-cheatsheet 基本操作 快捷键 功能 Esc 从当前模式转换到“普通模式”。所有的键对应到命令。 i “插入模式”用于插入文字。回归按键的本职工作。 : “</description>
+    </item>
+    
+  </channel>
+</rss>
