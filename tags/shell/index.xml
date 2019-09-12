@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>批量删除HDFS上无效的临时文件/ Batch delete hdfs dir</title>
+      <title>批量删除HDFS上无效的临时文件 / Batch delete hdfs dir</title>
       <link>https://atovk.github.io/post/bigdata/batch_delete_hdfs_dir/</link>
       <pubDate>Fri, 31 May 2019 23:46:56 +0800</pubDate>
       

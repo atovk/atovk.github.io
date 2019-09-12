@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>books on @EchoSence</title>
+    <link>https://atovk.github.io/tags/books/</link>
+    <description>Recent content in books on @EchoSence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ATOVK</copyright>
+    <lastBuildDate>Fri, 13 Sep 2019 01:07:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://atovk.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>书单 / Which books have you read ?</title>
+      <link>https://atovk.github.io/post/books/which_books_have_you_read/</link>
+      <pubDate>Fri, 13 Sep 2019 01:07:07 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/books/which_books_have_you_read/</guid>
+      <description>最近读了一些书，读的速度太快，导致前两本读了啥内容也不比较模糊，遂之索性把书单和主要内容记录下来，方便以后回忆和查阅。 201908 《领导力21法则》 《</description>
+    </item>
+    
+  </channel>
+</rss>

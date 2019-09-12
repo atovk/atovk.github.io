@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>JDBC链接各种数据库的例子 / Java jdbc example holder - @EchoSence</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="atovk" /><meta name="description" content="java语言下 jdbc 各种数据库的链接方式 mysql/mariadb 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 private static Connection getConn() { String driver = &amp;#34;com.mysql.jdbc.Driver&amp;#34;; String url = &amp;#34;jdbc:mysql://localhost:3306/samp_db&amp;#34;; String username = &amp;#34;root&amp;#34;; String password = &amp;#34;&amp;#34;; Connection conn = null; try { Class.forName(driver); //class" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+<meta name="google-site-verification" content="5wkMIUrqNvgT67LD9lCnUf9Cf_iSd7EKyOkonH3ILPs" />
+
+
+<meta name="generator" content="Hugo 0.58.0 with theme even" />
+
+
+<link rel="canonical" href="https://atovk.github.io/post/java/java_jdbc_example_holder/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="JDBC链接各种数据库的例子 / Java jdbc example holder" />
+<meta property="og:description" content="java语言下 jdbc 各种数据库的链接方式 mysql/mariadb 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 private static Connection getConn() { String driver = &#34;com.mysql.jdbc.Driver&#34;; String url = &#34;jdbc:mysql://localhost:3306/samp_db&#34;; String username = &#34;root&#34;; String password = &#34;&#34;; Connection conn = null; try { Class.forName(driver); //class" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://atovk.github.io/post/java/java_jdbc_example_holder/" />
+<meta property="article:published_time" content="2019-09-13T02:37:24+08:00" />
+<meta property="article:modified_time" content="2019-09-13T02:37:24+08:00" />
+<meta itemprop="name" content="JDBC链接各种数据库的例子 / Java jdbc example holder">
+<meta itemprop="description" content="java语言下 jdbc 各种数据库的链接方式 mysql/mariadb 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 private static Connection getConn() { String driver = &#34;com.mysql.jdbc.Driver&#34;; String url = &#34;jdbc:mysql://localhost:3306/samp_db&#34;; String username = &#34;root&#34;; String password = &#34;&#34;; Connection conn = null; try { Class.forName(driver); //class">
+
+
+<meta itemprop="datePublished" content="2019-09-13T02:37:24&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-13T02:37:24&#43;08:00" />
+<meta itemprop="wordCount" content="881">
+
+
+
+<meta itemprop="keywords" content="java,jdbc,database," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JDBC链接各种数据库的例子 / Java jdbc example holder"/>
+<meta name="twitter:description" content="java语言下 jdbc 各种数据库的链接方式 mysql/mariadb 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 private static Connection getConn() { String driver = &#34;com.mysql.jdbc.Driver&#34;; String url = &#34;jdbc:mysql://localhost:3306/samp_db&#34;; String username = &#34;root&#34;; String password = &#34;&#34;; Connection conn = null; try { Class.forName(driver); //class"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">@EchoSence</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">@EchoSence</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">JDBC链接各种数据库的例子 / Java jdbc example holder</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-13 </span>
+        <div class="post-category">
+            <a href="/categories/java/"> java </a>
+            <a href="/categories/jdbc/"> jdbc </a>
+            <a href="/categories/database/"> database </a>
+            </div>
+          <span class="more-meta"> 881 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#mysql-mariadb">mysql/mariadb</a></li>
+<li><a href="#oracle">oracle</a></li>
+<li><a href="#sqlserver">sqlserver</a></li>
+<li><a href="#db2">db2</a></li>
+<li><a href="#postgresql">PostgreSQL</a></li>
+<li><a href="#greenplum">greenplum</a></li>
+<li><a href="#hana">hana</a></li>
+<li><a href="#hive">hive</a></li>
+<li><a href="#sybase">sybase</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<blockquote>
+<p>java语言下 jdbc 各种数据库的链接方式</p>
+</blockquote>
+
+<h2 id="mysql-mariadb">mysql/mariadb</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nf">static</span> <span class="n">Connection</span> <span class="nf">getConn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="nf">driver</span> <span class="o">=</span> <span class="s">&#34;com.mysql.jdbc.Driver&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">url</span> <span class="o">=</span> <span class="s">&#34;jdbc:mysql://localhost:3306/samp_db&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">username</span> <span class="o">=</span> <span class="s">&#34;root&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span> <span class="c1">//classLoader,加载对应驱动
+</span><span class="c1"></span>        <span class="n">conn</span> <span class="o">=</span> <span class="p">(</span><span class="n">Connection</span><span class="p">)</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClassNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">SQLException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="oracle">oracle</h2>
+
+<ul>
+<li><p>(1)Oracle JDBC Thin using a ServiceName:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    #jdbc:oracle:thin:@//&lt;host&gt;:&lt;port&gt;/&lt;service_name&gt;
+    #Example: jdbc:oracle:thin:@//192.168.2.1:1521/XE</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>(2)Oracle JDBC Thin using an SID:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    #jdbc:oracle:thin:@&lt;host&gt;:&lt;port&gt;:&lt;SID&gt;
+    #Example: jdbc:oracle:thin:@192.168.2.1:1521:X01A</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>(3)Oracle JDBC Thin using a TNSName:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    #jdbc:oracle:thin:@&lt;TNSName&gt;
+    #Example: jdbc:oracle:thin:@GL</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 获得连接对象
+</span><span class="c1"></span><span class="kd">private</span> <span class="nf">static</span> <span class="n">Connection</span> <span class="nf">getConn</span><span class="p">()</span> <span class="p">{</span>
+<span class="n">String</span> <span class="nf">driver</span> <span class="o">=</span> <span class="s">&#34;oracle.jdbc.driver.OracleDriver&#34;</span><span class="p">;</span>
+<span class="n">String</span> <span class="nf">url</span> <span class="o">=</span> <span class="s">&#34;jdbc:oracle:thin:@//127.0.0.1:1521/orcl&#34;</span><span class="p">;</span>
+<span class="n">String</span> <span class="nf">username</span> <span class="o">=</span> <span class="s">&#34;root&#34;</span><span class="p">;</span>
+<span class="n">String</span> <span class="nf">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+<span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span> <span class="c1">//classLoader,加载对应驱动
+</span><span class="c1"></span>    <span class="n">conn</span> <span class="o">=</span> <span class="p">(</span><span class="n">Connection</span><span class="p">)</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClassNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">SQLException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<h2 id="sqlserver">sqlserver</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// sqlserver2012
+</span><span class="c1"></span><span class="kd">private</span> <span class="nf">static</span> <span class="n">Connection</span> <span class="nf">getConn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="nf">driver</span> <span class="o">=</span> <span class="s">&#34;com.microsoft.sqlserver.jdbc.SQLServerDriver&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">url</span> <span class="o">=</span> <span class="s">&#34;jdbc:sqlserver://localhost:1433;DatabaseName=student&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">username</span> <span class="o">=</span> <span class="s">&#34;root&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span> <span class="c1">//classLoader,加载对应驱动
+</span><span class="c1"></span>        <span class="n">conn</span> <span class="o">=</span> <span class="p">(</span><span class="n">Connection</span><span class="p">)</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClassNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">SQLException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="db2">db2</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nf">static</span> <span class="n">Connection</span> <span class="nf">getConn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="nf">driver</span> <span class="o">=</span> <span class="s">&#34;com.ibm.db2.jcc.DB2Driver&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">url</span> <span class="o">=</span> <span class="s">&#34;jdbc:db2://10.27.70.33:60000/dbtest:currentSchema=db2inst1&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">username</span> <span class="o">=</span> <span class="s">&#34;root&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span> <span class="c1">//classLoader,加载对应驱动
+</span><span class="c1"></span>        <span class="n">conn</span> <span class="o">=</span> <span class="p">(</span><span class="n">Connection</span><span class="p">)</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClassNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">SQLException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="postgresql">PostgreSQL</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nf">static</span> <span class="n">Connection</span> <span class="nf">getConn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="nf">driver</span> <span class="o">=</span> <span class="s">&#34;org.postgresql.Driver&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">url</span> <span class="o">=</span> <span class="s">&#34;jdbc:postgresql://127.0.0.1:5432/test&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">username</span> <span class="o">=</span> <span class="s">&#34;root&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span> <span class="c1">//classLoader,加载对应驱动
+</span><span class="c1"></span>        <span class="n">conn</span> <span class="o">=</span> <span class="p">(</span><span class="n">Connection</span><span class="p">)</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClassNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">SQLException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="greenplum">greenplum</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nf">static</span> <span class="n">Connection</span> <span class="nf">getConn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="nf">driver</span> <span class="o">=</span> <span class="s">&#34;com.pivotal.jdbc.GreenplumDriver&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">url</span> <span class="o">=</span> <span class="s">&#34;jdbc:pivotal:greenplum://10.10.10.10:5432;DatabaseName=mfg&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">username</span> <span class="o">=</span> <span class="s">&#34;root&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span> <span class="c1">//classLoader,加载对应驱动
+</span><span class="c1"></span>        <span class="n">conn</span> <span class="o">=</span> <span class="p">(</span><span class="n">Connection</span><span class="p">)</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClassNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">SQLException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="hana">hana</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nf">static</span> <span class="n">Connection</span> <span class="nf">getConn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="nf">driver</span> <span class="o">=</span> <span class="s">&#34;com.sap.db.jdbc.Driver&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">url</span> <span class="o">=</span> <span class="s">&#34;jdbc:sap://172.23.1.123:39015&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">username</span> <span class="o">=</span> <span class="s">&#34;root&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span> <span class="c1">//classLoader,加载对应驱动
+</span><span class="c1"></span>        <span class="n">conn</span> <span class="o">=</span> <span class="p">(</span><span class="n">Connection</span><span class="p">)</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClassNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">SQLException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="hive">hive</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nf">static</span> <span class="n">Connection</span> <span class="nf">getConn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="cm">/**
+</span><span class="cm">    hiveserver org.apache.Hadoop.hive.jdbc.HiveDriver
+</span><span class="cm">                    jdbc:hive://localhost:10000/default
+</span><span class="cm">
+</span><span class="cm">    hiveserver2 org.apache.Hive.jdbc.HiveDriver
+</span><span class="cm">                    jdbc:hive2://localhos:10000/default
+</span><span class="cm">    */</span>
+    <span class="n">String</span> <span class="nf">driver</span> <span class="o">=</span> <span class="s">&#34;org.apache.hive.jdbc.HiveDriver&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">url</span> <span class="o">=</span> <span class="s">&#34;jdbc:hive2://localhos:10000/default&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">username</span> <span class="o">=</span> <span class="s">&#34;root&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span> <span class="c1">//classLoader,加载对应驱动
+</span><span class="c1"></span>        <span class="n">conn</span> <span class="o">=</span> <span class="p">(</span><span class="n">Connection</span><span class="p">)</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClassNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">SQLException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="sybase">sybase</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nf">static</span> <span class="n">Connection</span> <span class="nf">getConn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="nf">Driver</span> <span class="o">=</span> <span class="s">&#34;com.sybase.jdbc3.jdbc.SybDriver&#34;</span><span class="p">;</span>  <span class="c1">//数据库驱动
+</span><span class="c1"></span>    <span class="n">String</span> <span class="nf">url</span> <span class="o">=</span> <span class="s">&#34;jdbc:sybase:Tds:192.168.2.103:5000/SXABC&#34;</span><span class="p">;</span> <span class="c1">// 连接的数据库是SXABC
+</span><span class="c1"></span>
+    <span class="n">String</span> <span class="nf">username</span> <span class="o">=</span> <span class="s">&#34;root&#34;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="nf">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span> <span class="c1">//classLoader,加载对应驱动
+</span><span class="c1"></span>        <span class="n">conn</span> <span class="o">=</span> <span class="p">(</span><span class="n">Connection</span><span class="p">)</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClassNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">SQLException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">atovk</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-09-13
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/java/">java</a>
+          <a href="/tags/jdbc/">jdbc</a>
+          <a href="/tags/database/">database</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/linux/linux_teminal_option/">
+            <span class="next-text nav-default">linux 命令行终端快捷键操作 / Linux teminal option</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'echosence';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:neatovk@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/atovk" class="iconfont icon-github" title="github"></a>
+  <a href="https://atovk.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ATOVK</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-132738029-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
