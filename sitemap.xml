@@ -23,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://atovk.github.io/categories/database/</loc>
-    <lastmod>2019-09-13T02:37:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://atovk.github.io/tags/database/</loc>
     <lastmod>2019-09-13T02:37:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -37,7 +30,7 @@
   </url>
   
   <url>
-    <loc>https://atovk.github.io/tags/java/</loc>
+    <loc>https://atovk.github.io/categories/database/</loc>
     <lastmod>2019-09-13T02:37:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -51,7 +44,7 @@
   </url>
   
   <url>
-    <loc>https://atovk.github.io/tags/jdbc/</loc>
+    <loc>https://atovk.github.io/tags/java/</loc>
     <lastmod>2019-09-13T02:37:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -59,6 +52,13 @@
   
   <url>
     <loc>https://atovk.github.io/categories/jdbc/</loc>
+    <lastmod>2019-09-13T02:37:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/tags/jdbc/</loc>
     <lastmod>2019-09-13T02:37:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://atovk.github.io/tags/dns/</loc>
+    <loc>https://atovk.github.io/categories/dns/</loc>
     <lastmod>2019-09-13T02:04:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://atovk.github.io/categories/dns/</loc>
+    <loc>https://atovk.github.io/tags/dns/</loc>
     <lastmod>2019-09-13T02:04:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://atovk.github.io/categories/macos/</loc>
+    <loc>https://atovk.github.io/tags/macos/</loc>
     <lastmod>2019-09-13T01:42:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://atovk.github.io/tags/macos/</loc>
+    <loc>https://atovk.github.io/categories/macos/</loc>
     <lastmod>2019-09-13T01:42:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://atovk.github.io/categories/hdfs/</loc>
+    <loc>https://atovk.github.io/tags/hdfs/</loc>
     <lastmod>2019-05-31T23:46:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://atovk.github.io/tags/hdfs/</loc>
+    <loc>https://atovk.github.io/categories/hdfs/</loc>
     <lastmod>2019-05-31T23:46:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -359,14 +359,14 @@
   </url>
   
   <url>
-    <loc>https://atovk.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://atovk.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2019-01-20T00:52:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://atovk.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://atovk.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2019-01-20T00:52:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
