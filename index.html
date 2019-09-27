@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="5wkMIUrqNvgT67LD9lCnUf9Cf_iSd7EKyOkonH3ILPs" />
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://atovk.github.io/" />
@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://atovk.github.io/" />
 
-<meta property="og:updated_time" content="2019-09-13T02:37:24+08:00" />
+<meta property="og:updated_time" content="2019-09-27T23:11:55+08:00" />
 <meta itemprop="name" content="@EchoSence">
 <meta itemprop="description" content="atovk‘s site.">
 
@@ -118,6 +118,81 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/linux/linux_ctontab_timely_operational/">linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-09-27 </span>
+      <div class="post-category">
+          <a href="/categories/linux/"> linux </a>
+          <a href="/categories/crontab/"> crontab </a>
+          <a href="/categories/mysql/"> mysql </a>
+          </div>
+        <span class="more-meta"> 197 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      通过定时crontab 调用远程执行sql新建表结构 create_table.sh 1 2 3 4 5 6 7 8 9 10 11 12 13 #!/bin/bash # 生成明天的日期 tomorrow=$(date -d &#34;+1 days&#34; &#34;+%Y%m%d&#34;) echo next date: ${tomorrow} # sql文件脚本中的日期替
+    </div>
+    <div class="read-more">
+      <a href="/post/linux/linux_ctontab_timely_operational/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/bigdata/kudu_table_schema_design/">kudu 表设计使用及限制 / Kudu table schema design and limited</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-09-27 </span>
+      <div class="post-category">
+          <a href="/categories/kudu/"> kudu </a>
+          <a href="/categories/table/"> table </a>
+          <a href="/categories/bigdate/"> bigdate </a>
+          </div>
+        <span class="more-meta"> 1668 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      参考 kudu 官方指导手册 future Fast processing of OLAP workloads. &gt; OLAP 级数数据处理能力 Integration with MapReduce, Spark and other Hadoop ecosystem components. &gt; 可集成大数据常用组建(MR,spark,hive,impala,&he
+    </div>
+    <div class="read-more">
+      <a href="/post/bigdata/kudu_table_schema_design/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/java/oshi_system_and_hardware_information/">java通过oshi获取系统和硬件信息 / Oshi get system and hardware information</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-09-27 </span>
+      <div class="post-category">
+          <a href="/categories/linux/"> linux </a>
+          <a href="/categories/java/"> java </a>
+          <a href="/categories/monitor/"> monitor </a>
+          </div>
+        <span class="more-meta"> 864 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      OSHI 是用java写的系统监控工具接口，提供主要的监控指标信息，具体接口作用如下： maven 依赖引入 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;com.github.oshi&lt;/groupId&gt; &lt;artifactId&gt;oshi-core&lt;/artifactId&gt; &lt;version&gt;4.0.0&lt;/version&gt; &lt;/dependency&gt; API 操作 1 2 3 4 5 6 7 8 // 初始化系
+    </div>
+    <div class="read-more">
+      <a href="/post/java/oshi_system_and_hardware_information/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/java/java_jdbc_example_holder/">JDBC链接各种数据库的例子 / Java jdbc example holder</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-09-13 </span>
@@ -162,76 +237,6 @@
     </div>
     <div class="read-more">
       <a href="/post/linux/linux_teminal_option/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/linux/domain_dns_info_detail/">域名解析类型详解 / Domain DNS info detail</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-09-13 </span>
-      <div class="post-category">
-          <a href="/categories/dns/"> DNS </a>
-          </div>
-        <span class="more-meta"> 1005 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      域名解析类型详解 1.主机[A]记录 描述: 主机地址记录。在 DNS 域名与 IP 地址之间建立映射关系 语法: owner class ttl A IP_v4_address 例子: host1.example.microsoft.com. IN A 127.0.0.1 2.别名[CNAME] 描
-    </div>
-    <div class="read-more">
-      <a href="/post/linux/domain_dns_info_detail/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/mac/fix_mac_application_cannot_open/">MAC 无法打开应用程序 / Fix mac application can‘t open</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-09-13 </span>
-      <div class="post-category">
-          <a href="/categories/macos/"> MacOS </a>
-          </div>
-        <span class="more-meta"> 154 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Mac OS-[xxx.app已损坏,打不开.你应该将它移到废纸篓] 出现这个问题的解决方法： 修改系统配置： 1 系统偏好设置... -&gt; 安全性与隐私 -&gt; 修改
-    </div>
-    <div class="read-more">
-      <a href="/post/mac/fix_mac_application_cannot_open/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/books/which_books_have_you_read/">书单 / Which books have you read ?</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-09-13 </span>
-      <div class="post-category">
-          <a href="/categories/books/"> books </a>
-          <a href="/categories/reader/"> reader </a>
-          </div>
-        <span class="more-meta"> 124 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      最近读了一些书，读的速度太快，导致前两本读了啥内容也不比较模糊，遂之索性把书单和主要内容记录下来，方便以后回忆和查阅。 201908 《领导力21法则》 《
-    </div>
-    <div class="read-more">
-      <a href="/post/books/which_books_have_you_read/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

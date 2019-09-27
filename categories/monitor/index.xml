@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>monitor on @EchoSence</title>
+    <link>https://atovk.github.io/categories/monitor/</link>
+    <description>Recent content in monitor on @EchoSence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ATOVK</copyright>
+    <lastBuildDate>Fri, 27 Sep 2019 22:42:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://atovk.github.io/categories/monitor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>java通过oshi获取系统和硬件信息 / Oshi get system and hardware information</title>
+      <link>https://atovk.github.io/post/java/oshi_system_and_hardware_information/</link>
+      <pubDate>Fri, 27 Sep 2019 22:42:49 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/java/oshi_system_and_hardware_information/</guid>
+      <description>OSHI 是用java写的系统监控工具接口，提供主要的监控指标信息，具体接口作用如下： maven 依赖引入 1 2 3 4 5 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.github.oshi&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;oshi-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;4.0.0&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; API 操作 1 2 3 4 5 6 7 8 // 初始化系</description>
+    </item>
+    
+  </channel>
+</rss>

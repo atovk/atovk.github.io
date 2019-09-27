@@ -7,10 +7,82 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Fri, 13 Sep 2019 02:37:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Sep 2019 23:11:55 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>crontab</title>
+      <link>https://atovk.github.io/categories/crontab/</link>
+      <pubDate>Fri, 27 Sep 2019 23:11:55 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/crontab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://atovk.github.io/categories/linux/</link>
+      <pubDate>Fri, 27 Sep 2019 23:11:55 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>https://atovk.github.io/categories/mysql/</link>
+      <pubDate>Fri, 27 Sep 2019 23:11:55 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bigdate</title>
+      <link>https://atovk.github.io/categories/bigdate/</link>
+      <pubDate>Fri, 27 Sep 2019 22:58:35 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/bigdate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kudu</title>
+      <link>https://atovk.github.io/categories/kudu/</link>
+      <pubDate>Fri, 27 Sep 2019 22:58:35 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/kudu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>table</title>
+      <link>https://atovk.github.io/categories/table/</link>
+      <pubDate>Fri, 27 Sep 2019 22:58:35 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://atovk.github.io/categories/java/</link>
+      <pubDate>Fri, 27 Sep 2019 22:42:49 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitor</title>
+      <link>https://atovk.github.io/categories/monitor/</link>
+      <pubDate>Fri, 27 Sep 2019 22:42:49 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/monitor/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>database</title>
@@ -22,29 +94,11 @@
     </item>
     
     <item>
-      <title>java</title>
-      <link>https://atovk.github.io/categories/java/</link>
-      <pubDate>Fri, 13 Sep 2019 02:37:24 +0800</pubDate>
-      
-      <guid>https://atovk.github.io/categories/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>jdbc</title>
       <link>https://atovk.github.io/categories/jdbc/</link>
       <pubDate>Fri, 13 Sep 2019 02:37:24 +0800</pubDate>
       
       <guid>https://atovk.github.io/categories/jdbc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://atovk.github.io/categories/linux/</link>
-      <pubDate>Fri, 13 Sep 2019 02:20:08 +0800</pubDate>
-      
-      <guid>https://atovk.github.io/categories/linux/</guid>
       <description></description>
     </item>
     
@@ -144,15 +198,6 @@
       <pubDate>Sun, 20 Jan 2019 00:52:59 +0800</pubDate>
       
       <guid>https://atovk.github.io/categories/2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mysql</title>
-      <link>https://atovk.github.io/categories/mysql/</link>
-      <pubDate>Sun, 20 Jan 2019 00:52:59 +0800</pubDate>
-      
-      <guid>https://atovk.github.io/categories/mysql/</guid>
       <description></description>
     </item>
     

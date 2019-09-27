@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Fri, 13 Sep 2019 02:37:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Sep 2019 23:11:55 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,33 @@
       
       <guid>https://atovk.github.io/about/</guid>
       <description>about 记录 跬步千里 计划今年考个网络安全员</description>
+    </item>
+    
+    <item>
+      <title>linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab</title>
+      <link>https://atovk.github.io/post/linux/linux_ctontab_timely_operational/</link>
+      <pubDate>Fri, 27 Sep 2019 23:11:55 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/linux/linux_ctontab_timely_operational/</guid>
+      <description>通过定时crontab 调用远程执行sql新建表结构 create_table.sh 1 2 3 4 5 6 7 8 9 10 11 12 13 #!/bin/bash # 生成明天的日期 tomorrow=$(date -d &amp;#34;+1 days&amp;#34; &amp;#34;+%Y%m%d&amp;#34;) echo next date: ${tomorrow} # sql文件脚本中的日期替</description>
+    </item>
+    
+    <item>
+      <title>kudu 表设计使用及限制 / Kudu table schema design and limited</title>
+      <link>https://atovk.github.io/post/bigdata/kudu_table_schema_design/</link>
+      <pubDate>Fri, 27 Sep 2019 22:58:35 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/bigdata/kudu_table_schema_design/</guid>
+      <description>参考 kudu 官方指导手册 future Fast processing of OLAP workloads. &amp;gt; OLAP 级数数据处理能力 Integration with MapReduce, Spark and other Hadoop ecosystem components. &amp;gt; 可集成大数据常用组建(MR,spark,hive,impala,&amp;he</description>
+    </item>
+    
+    <item>
+      <title>java通过oshi获取系统和硬件信息 / Oshi get system and hardware information</title>
+      <link>https://atovk.github.io/post/java/oshi_system_and_hardware_information/</link>
+      <pubDate>Fri, 27 Sep 2019 22:42:49 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/java/oshi_system_and_hardware_information/</guid>
+      <description>OSHI 是用java写的系统监控工具接口，提供主要的监控指标信息，具体接口作用如下： maven 依赖引入 1 2 3 4 5 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.github.oshi&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;oshi-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;4.0.0&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; API 操作 1 2 3 4 5 6 7 8 // 初始化系</description>
     </item>
     
     <item>
