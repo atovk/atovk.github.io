@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab - @EchoSence</title>
+  <title>批量删除ES中无效的index / Elasticsearch batch delete indexs - @EchoSence</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="atovk" /><meta name="description" content="使用crontab定时操作 某些任务: mysql定时新建空表" /><meta name="keywords" content="echosence, 技术分享, " />
+<meta name="author" content="atovk" /><meta name="description" content="批量自动删除 elasticsearch 中大量无效index" /><meta name="keywords" content="echosence, 技术分享, " />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
-<link rel="canonical" href="https://atovk.github.io/post/linux/linux_ctontab_timely_operational/" />
+<link rel="canonical" href="https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,26 +38,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab" />
-<meta property="og:description" content="使用crontab定时操作 某些任务: mysql定时新建空表" />
+<meta property="og:title" content="批量删除ES中无效的index / Elasticsearch batch delete indexs" />
+<meta property="og:description" content="批量自动删除 elasticsearch 中大量无效index" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://atovk.github.io/post/linux/linux_ctontab_timely_operational/" />
-<meta property="article:published_time" content="2019-09-27T23:11:55+08:00" />
-<meta property="article:modified_time" content="2019-09-27T23:11:55+08:00" />
-<meta itemprop="name" content="linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab">
-<meta itemprop="description" content="使用crontab定时操作 某些任务: mysql定时新建空表">
+<meta property="og:url" content="https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/" />
+<meta property="article:published_time" content="2019-09-28T14:43:11+08:00" />
+<meta property="article:modified_time" content="2019-09-28T14:43:11+08:00" />
+<meta itemprop="name" content="批量删除ES中无效的index / Elasticsearch batch delete indexs">
+<meta itemprop="description" content="批量自动删除 elasticsearch 中大量无效index">
 
 
-<meta itemprop="datePublished" content="2019-09-27T23:11:55&#43;08:00" />
-<meta itemprop="dateModified" content="2019-09-27T23:11:55&#43;08:00" />
-<meta itemprop="wordCount" content="197">
+<meta itemprop="datePublished" content="2019-09-28T14:43:11&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-28T14:43:11&#43;08:00" />
+<meta itemprop="wordCount" content="241">
 
 
 
-<meta itemprop="keywords" content="linux,crontab,mysql," />
+<meta itemprop="keywords" content="elasticsearch,delete,index,shell," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab"/>
-<meta name="twitter:description" content="使用crontab定时操作 某些任务: mysql定时新建空表"/>
+<meta name="twitter:title" content="批量删除ES中无效的index / Elasticsearch batch delete indexs"/>
+<meta name="twitter:description" content="批量自动删除 elasticsearch 中大量无效index"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -124,16 +124,17 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab</h1>
+      <h1 class="post-title">批量删除ES中无效的index / Elasticsearch batch delete indexs</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-09-27 </span>
+        <span class="post-time"> 2019-09-28 </span>
         <div class="post-category">
-            <a href="/categories/linux/"> linux </a>
-            <a href="/categories/crontab/"> crontab </a>
-            <a href="/categories/mysql/"> mysql </a>
+            <a href="/categories/elasticsearch/"> elasticsearch </a>
+            <a href="/categories/delete/"> delete </a>
+            <a href="/categories/index/"> index </a>
+            <a href="/categories/shell/"> shell </a>
             </div>
-          <span class="more-meta"> 197 words </span>
+          <span class="more-meta"> 241 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -146,8 +147,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#create-table-sh">create_table.sh</a></li>
-<li><a href="#加入到-crontab-中每日生成下一日的空表">加入到 crontab 中每日生成下一日的空表</a></li>
+<li><a href="#正则获取所有无效index信息到备选删除记录文件中">正则获取所有无效index信息到备选删除记录文件中</a></li>
+<li><a href="#完整自动脚本如下">完整自动脚本如下</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -157,13 +158,28 @@
       
 
 <blockquote>
-<p>通过定时crontab 调用远程执行sql新建表结构</p>
+<p>通过elasticSearch 结合shell 批量删除 ES中大量无效index</p>
 </blockquote>
 
-<h2 id="create-table-sh">create_table.sh</h2>
+<h2 id="正则获取所有无效index信息到备选删除记录文件中">正则获取所有无效index信息到备选删除记录文件中</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 通过 curl 获取 es 所有index信息，再通过 grep正则过滤出我们要删除的index，awk 只获取index名称 到 index.log 文件中</span>
+curl <span class="s2">&#34;</span><span class="si">${</span><span class="nv">server</span><span class="si">}</span><span class="s2">/_cat/indices&#34;</span> <span class="p">|</span> grep <span class="s1">&#39;real_time_sales_temporary_new_2019092408*&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span> &gt; index.log</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="完整自动脚本如下">完整自动脚本如下</h2>
+
+<blockquote>
+<p>循环我们过滤出得无效index列表，执行 delete 操作</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -176,48 +192,25 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="c1"># 生成明天的日期</span>
-<span class="nv">tomorrow</span><span class="o">=</span><span class="k">$(</span>date -d <span class="s2">&#34;+1 days&#34;</span> <span class="s2">&#34;+%Y%m%d&#34;</span><span class="k">)</span>
-<span class="nb">echo</span> next date: <span class="si">${</span><span class="nv">tomorrow</span><span class="si">}</span>
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="c1"># atovk 20190924</span>
 
-<span class="c1"># sql文件脚本中的日期替换为明日的日期</span>
-sed -i <span class="s2">&#34;s/\([0-9]\{8\}\)/</span><span class="si">${</span><span class="nv">tomorrow</span><span class="si">}</span><span class="s2">/g&#34;</span> /home/crontab/create_table.sql
+<span class="c1"># elasticsearch 服务地址</span>
+<span class="nv">server</span><span class="o">=</span><span class="s2">&#34;http://10.12.11.1:9346&#34;</span>
 
-<span class="nb">echo</span> <span class="sb">`</span>cat /home/crontab/create_table.sql <span class="p">|</span> head -n <span class="m">1</span><span class="sb">`</span>
+<span class="c1"># 获取 正则查询到的 index real_time_sales_temporary_new_2019092408*</span>
+curl <span class="s2">&#34;</span><span class="si">${</span><span class="nv">server</span><span class="si">}</span><span class="s2">/_cat/indices&#34;</span> <span class="p">|</span> grep <span class="s1">&#39;real_time_sales_temporary_new_2019092408*&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span> &gt; index.log
 
-<span class="c1"># 通过执行mysql执行文件中的sql 脚本创建以命题啊日期结尾的表名</span>
-mysql -uroot -p123456 -h10.0.56.20 -Dpangu&lt;/home/wangjun/crontab/create_table.sql</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="加入到-crontab-中每日生成下一日的空表">加入到 crontab 中每日生成下一日的空表</h2>
-
-<blockquote>
-<p>别忘了给脚本加执行权限</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 每天一点执行</span>
-<span class="m">0</span> <span class="m">1</span> * * * sh /home/wangjun/crontab/create_table.sh
-
-<span class="c1"># 创建 crontab 任务</span>
-crontab /home/wangjun/crontab/crontest.cron
-
-<span class="c1"># 查看crontab 任务</span>
-crontab -l</code></pre></td></tr></table>
+<span class="c1"># 循环删除相关无效index</span>
+cat index.log <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> line
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">line</span><span class="si">}</span><span class="s2">&#34;</span>
+    curl -XDELETE <span class="s2">&#34;</span><span class="si">${</span><span class="nv">server</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">line</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="k">done</span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -230,7 +223,7 @@ crontab -l</code></pre></td></tr></table>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2019-09-27
+        2019-09-28
         
     </span>
   </p>
@@ -242,18 +235,15 @@ crontab -l</code></pre></td></tr></table>
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/linux/">linux</a>
-          <a href="/tags/crontab/">crontab</a>
-          <a href="/tags/mysql/">mysql</a>
+          <a href="/tags/elasticsearch/">elasticsearch</a>
+          <a href="/tags/delete/">delete</a>
+          <a href="/tags/index/">index</a>
+          <a href="/tags/shell/">shell</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/bigdata/elasticsearch_batch_delete_indexs/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">批量删除ES中无效的index / Elasticsearch batch delete indexs</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/bigdata/kudu_table_schema_design/">
-            <span class="next-text nav-default">kudu 表设计使用及限制 / Kudu table schema design and limited</span>
+        
+        <a class="next" href="/post/linux/linux_ctontab_timely_operational/">
+            <span class="next-text nav-default">linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

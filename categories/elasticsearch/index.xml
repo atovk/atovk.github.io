@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>shell on @EchoSence</title>
-    <link>https://atovk.github.io/categories/shell/</link>
-    <description>Recent content in shell on @EchoSence</description>
+    <title>elasticsearch on @EchoSence</title>
+    <link>https://atovk.github.io/categories/elasticsearch/</link>
+    <description>Recent content in elasticsearch on @EchoSence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
     <lastBuildDate>Sat, 28 Sep 2019 14:43:11 +0800</lastBuildDate>
     
-	<atom:link href="https://atovk.github.io/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://atovk.github.io/categories/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/</guid>
       <description>通过elasticSearch 结合shell 批量删除 ES中大量无效index 正则获取所有无效index信息到备选删除记录文件中 1 2 # 通过 curl 获</description>
-    </item>
-    
-    <item>
-      <title>批量删除HDFS上无效的临时文件 / Batch delete hdfs dir</title>
-      <link>https://atovk.github.io/post/bigdata/batch_delete_hdfs_dir/</link>
-      <pubDate>Fri, 31 May 2019 23:46:56 +0800</pubDate>
-      
-      <guid>https://atovk.github.io/post/bigdata/batch_delete_hdfs_dir/</guid>
-      <description>批量删除HDFS上无效的临时文件 1 需求：当前日期下的临时目录不删除（可能存在正在运行的临时文件），通过日期过滤dir将非当前日期的dir进行</description>
     </item>
     
   </channel>

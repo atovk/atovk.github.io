@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Fri, 27 Sep 2019 23:11:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Sep 2019 14:43:11 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       
       <guid>https://atovk.github.io/about/</guid>
       <description>about 记录 跬步千里 计划今年考个网络安全员</description>
+    </item>
+    
+    <item>
+      <title>批量删除ES中无效的index / Elasticsearch batch delete indexs</title>
+      <link>https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/</link>
+      <pubDate>Sat, 28 Sep 2019 14:43:11 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/</guid>
+      <description>通过elasticSearch 结合shell 批量删除 ES中大量无效index 正则获取所有无效index信息到备选删除记录文件中 1 2 # 通过 curl 获</description>
     </item>
     
     <item>
