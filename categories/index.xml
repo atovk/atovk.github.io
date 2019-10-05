@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Sat, 28 Sep 2019 14:43:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 13:17:24 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>book</title>
+      <link>https://atovk.github.io/categories/book/</link>
+      <pubDate>Sat, 05 Oct 2019 13:17:24 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kindle</title>
+      <link>https://atovk.github.io/categories/kindle/</link>
+      <pubDate>Sat, 05 Oct 2019 13:17:24 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/kindle/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>delete</title>

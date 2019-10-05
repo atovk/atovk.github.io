@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Sat, 28 Sep 2019 14:43:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 13:17:24 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>《人性的弱点》</title>
+      <link>https://atovk.github.io/post/readbook/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</link>
+      <pubDate>Sat, 05 Oct 2019 13:17:24 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/readbook/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</guid>
+      <description>人性的弱点 戴尔.卡内基 著；以下是本书的部分目录及语录节选。 与人相处的基本技巧 Fundamental Techniques in Handling People 1 如欲采蜜，勿蹴蜂房 批评不但不会改变事实，反而会招致愤</description>
+    </item>
     
     <item>
       <title>批量删除ES中无效的index / Elasticsearch batch delete indexs</title>
