@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="5wkMIUrqNvgT67LD9lCnUf9Cf_iSd7EKyOkonH3ILPs" />
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.74.2 with theme even" />
 
 
 <link rel="canonical" href="https://atovk.github.io/post/linux/domain_dns_info_detail/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2019-09-13T02:04:31+08:00" />
 <meta itemprop="name" content="域名解析类型详解 / Domain DNS info detail">
 <meta itemprop="description" content="域名解析类型详解 1.主机[A]记录 描述: 主机地址记录。在 DNS 域名与 IP 地址之间建立映射关系 语法: owner class ttl A IP_v4_address 例子: host1.example.microsoft.com. IN A 127.0.0.1 2.别名[CNAME] 描">
-
-
 <meta itemprop="datePublished" content="2019-09-13T02:04:31&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-13T02:04:31&#43;08:00" />
-<meta itemprop="wordCount" content="1005">
+<meta itemprop="wordCount" content="1003">
 
 
 
-<meta itemprop="keywords" content="DNS,domain," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="DNS,domain," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="域名解析类型详解 / Domain DNS info detail"/>
 <meta name="twitter:description" content="域名解析类型详解 1.主机[A]记录 描述: 主机地址记录。在 DNS 域名与 IP 地址之间建立映射关系 语法: owner class ttl A IP_v4_address 例子: host1.example.microsoft.com. IN A 127.0.0.1 2.别名[CNAME] 描"/>
 
@@ -131,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/dns/"> DNS </a>
             </div>
-          <span class="more-meta"> 1005 words </span>
+          <span class="more-meta"> 1003 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -141,118 +139,131 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#1-主机-a-记录">1.主机[A]记录</a></li>
-<li><a href="#2-别名-cname">2.别名[CNAME]</a></li>
-<li><a href="#3-主机信息-hinfo">3.主机信息[HINFO]</a></li>
-<li><a href="#4-邮箱-mb">4.邮箱[MB]</a></li>
-<li><a href="#5-邮箱或通信信息-minfo">5.邮箱或通信信息 MINFO</a></li>
-<li><a href="#6-邮件交换器-mx">6.邮件交换器 [MX]</a></li>
-<li><a href="#7-指针记录-ptr">7.指针记录 [PTR]</a></li>
-<li><a href="#8-服务记录-srv">8.服务记录 [SRV]</a></li>
-<li><a href="#9-已知服务记录-wks">9.已知服务记录 [WKS]</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#1主机a记录">1.主机[A]记录</a></li>
+    <li><a href="#2别名cname">2.别名[CNAME]</a></li>
+    <li><a href="#3主机信息hinfo">3.主机信息[HINFO]</a></li>
+    <li><a href="#4邮箱mb">4.邮箱[MB]</a></li>
+    <li><a href="#5邮箱或通信信息-minfo">5.邮箱或通信信息 MINFO</a></li>
+    <li><a href="#6邮件交换器-mx">6.邮件交换器 [MX]</a></li>
+    <li><a href="#7指针记录-ptr">7.指针记录 [PTR]</a></li>
+    <li><a href="#8服务记录-srv">8.服务记录 [SRV]</a></li>
+    <li><a href="#9已知服务记录-wks">9.已知服务记录 [WKS]</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<blockquote>
+      <blockquote>
 <p>域名解析类型详解</p>
 </blockquote>
-
-<h2 id="1-主机-a-记录">1.主机[A]记录</h2>
-
+<h2 id="1主机a记录">1.主机[A]记录</h2>
 <ul>
-<li><p>描述: 主机地址记录。在 DNS 域名与 IP 地址之间建立映射关系</p></li>
-
-<li><p>语法:  owner class ttl A IP_v4_address</p></li>
-
-<li><p>例子: host1.example.microsoft.com. IN A 127.0.0.1</p></li>
+<li>
+<p>描述: 主机地址记录。在 DNS 域名与 IP 地址之间建立映射关系</p>
+</li>
+<li>
+<p>语法:  owner class ttl A IP_v4_address</p>
+</li>
+<li>
+<p>例子: host1.example.microsoft.com. IN A 127.0.0.1</p>
+</li>
 </ul>
-
-<h2 id="2-别名-cname">2.别名[CNAME]</h2>
-
+<h2 id="2别名cname">2.别名[CNAME]</h2>
 <ul>
-<li><p>描述: 用来表示用在该区域中的其它资源记录类型中已指定名称的替补或别名 DNS 域名。</p></li>
-
-<li><p>语法: owner ttl class AFSDB subtype server_host_name</p></li>
-
-<li><p>例子: aliasname.example.microsoft.com. AFSDB 1 truename.example.microsoft.com.</p></li>
+<li>
+<p>描述: 用来表示用在该区域中的其它资源记录类型中已指定名称的替补或别名 DNS 域名。</p>
+</li>
+<li>
+<p>语法: owner ttl class AFSDB subtype server_host_name</p>
+</li>
+<li>
+<p>例子: aliasname.example.microsoft.com. AFSDB 1 truename.example.microsoft.com.</p>
+</li>
 </ul>
-
-<h2 id="3-主机信息-hinfo">3.主机信息[HINFO]</h2>
-
+<h2 id="3主机信息hinfo">3.主机信息[HINFO]</h2>
 <ul>
-<li><p>描述: 用来说明映射到特定 DNS 主机名的 CPU 类型和操作系统类型的 RFC-1700 保留字符串类型，这个信息可以被应用程序通信协议使用。</p></li>
-
-<li><p>语法: owner ttl class HINFO cpu_type os_type</p></li>
-
-<li><p>例子: my-computer-name.example.microsoft.com. HINFO INTEL-386 WIN32</p></li>
+<li>
+<p>描述: 用来说明映射到特定 DNS 主机名的 CPU 类型和操作系统类型的 RFC-1700 保留字符串类型，这个信息可以被应用程序通信协议使用。</p>
+</li>
+<li>
+<p>语法: owner ttl class HINFO cpu_type os_type</p>
+</li>
+<li>
+<p>例子: my-computer-name.example.microsoft.com. HINFO INTEL-386 WIN32</p>
+</li>
 </ul>
-
-<h2 id="4-邮箱-mb">4.邮箱[MB]</h2>
-
+<h2 id="4邮箱mb">4.邮箱[MB]</h2>
 <ul>
-<li><p>描述: 用来将指定的域邮箱名映射到这个邮箱的主机的当前区域中的主机地址记录</p></li>
-
-<li><p>语法: owner ttl class MB mailbox_hostname</p></li>
-
-<li><p>例子: mailbox.example.microsoft.com. MB mailhost1.example.microsoft.com</p></li>
+<li>
+<p>描述: 用来将指定的域邮箱名映射到这个邮箱的主机的当前区域中的主机地址记录</p>
+</li>
+<li>
+<p>语法: owner ttl class MB mailbox_hostname</p>
+</li>
+<li>
+<p>例子: mailbox.example.microsoft.com. MB mailhost1.example.microsoft.com</p>
+</li>
 </ul>
-
-<h2 id="5-邮箱或通信信息-minfo">5.邮箱或通信信息 MINFO</h2>
-
+<h2 id="5邮箱或通信信息-minfo">5.邮箱或通信信息 MINFO</h2>
 <ul>
-<li><p>描述: 用来指定负责维护该记录中特定通信名单或邮箱的联系域邮箱名称。同时，还被用来指定接收与该记录中特定通信名单或邮箱有关的错误信息的邮箱</p></li>
-
-<li><p>语法: owner ttl class MINFO responsible_mailbox error_mailbox</p></li>
-
-<li><p>例子: administrator.example.microsoft.com. MINFO resp-mbox.example.microsoft.com err-mbox.example.microsoft.com</p></li>
+<li>
+<p>描述: 用来指定负责维护该记录中特定通信名单或邮箱的联系域邮箱名称。同时，还被用来指定接收与该记录中特定通信名单或邮箱有关的错误信息的邮箱</p>
+</li>
+<li>
+<p>语法: owner ttl class MINFO responsible_mailbox error_mailbox</p>
+</li>
+<li>
+<p>例子: administrator.example.microsoft.com. MINFO resp-mbox.example.microsoft.com err-mbox.example.microsoft.com</p>
+</li>
 </ul>
-
-<h2 id="6-邮件交换器-mx">6.邮件交换器 [MX]</h2>
-
+<h2 id="6邮件交换器-mx">6.邮件交换器 [MX]</h2>
 <ul>
-<li><p>描述: 用来向特定邮件交换器提供消息路由，该主机作为指定 DNS 域名的邮件交换器。MX 记录需要一个16-位整数来表示消息路由中的主机优先级，多个邮件交换在消息一中被指定。对于这个记录类型中的每个邮件交换主机，需要一个相应的主机地址类型记录。</p></li>
-
-<li><p>语法: owner ttl class MX preference mail_exchanger_host</p></li>
-
-<li><p>例子: example.microsoft.com. MX 10 mailserver1.example.microsoft.com</p></li>
+<li>
+<p>描述: 用来向特定邮件交换器提供消息路由，该主机作为指定 DNS 域名的邮件交换器。MX 记录需要一个16-位整数来表示消息路由中的主机优先级，多个邮件交换在消息一中被指定。对于这个记录类型中的每个邮件交换主机，需要一个相应的主机地址类型记录。</p>
+</li>
+<li>
+<p>语法: owner ttl class MX preference mail_exchanger_host</p>
+</li>
+<li>
+<p>例子: example.microsoft.com. MX 10 mailserver1.example.microsoft.com</p>
+</li>
 </ul>
-
-<h2 id="7-指针记录-ptr">7.指针记录 [PTR]</h2>
-
+<h2 id="7指针记录-ptr">7.指针记录 [PTR]</h2>
 <ul>
-<li><p>描述:用来指向域名空间中的某个位置。PTR记录通常在特殊域中来执行地址到名称镜像的反向搜索。每个记录提供要指向域名称空间的某个其它位置的简单数据。</p></li>
-
-<li><p>语法: owner ttl class PTR targeted_domain_name</p></li>
-
-<li><p>例子: 1.0.0.10.in-addr.arpa. PTR host.example.microsoft.com.</p></li>
+<li>
+<p>描述:用来指向域名空间中的某个位置。PTR记录通常在特殊域中来执行地址到名称镜像的反向搜索。每个记录提供要指向域名称空间的某个其它位置的简单数据。</p>
+</li>
+<li>
+<p>语法: owner ttl class PTR targeted_domain_name</p>
+</li>
+<li>
+<p>例子: 1.0.0.10.in-addr.arpa. PTR host.example.microsoft.com.</p>
+</li>
 </ul>
-
-<h2 id="8-服务记录-srv">8.服务记录 [SRV]</h2>
-
+<h2 id="8服务记录-srv">8.服务记录 [SRV]</h2>
 <ul>
-<li><p>描述: SRV 资源记录允许管理员使用单一 DNS 域的多个服务器，容易的用管理功能将 TCP/IP 服务从一个主机移到另一个主机，并且将服务提供的程序主机分派为服务的主服务器，将其它的分派为辅助</p></li>
-
-<li><p>语法: service.protocol.name ttl class SRV preference weight port target</p></li>
-
-<li><p>例子: ldap.tcp.ms-dcs SRV 0 0 389 dc1.example.microsoft.com SRV 10 0 389 dc2.example.microsoft.com</p></li>
+<li>
+<p>描述: SRV 资源记录允许管理员使用单一 DNS 域的多个服务器，容易的用管理功能将 TCP/IP 服务从一个主机移到另一个主机，并且将服务提供的程序主机分派为服务的主服务器，将其它的分派为辅助</p>
+</li>
+<li>
+<p>语法: service.protocol.name ttl class SRV preference weight port target</p>
+</li>
+<li>
+<p>例子: ldap.tcp.ms-dcs SRV 0 0 389 dc1.example.microsoft.com SRV 10 0 389 dc2.example.microsoft.com</p>
+</li>
 </ul>
-
-<h2 id="9-已知服务记录-wks">9.已知服务记录 [WKS]</h2>
-
+<h2 id="9已知服务记录-wks">9.已知服务记录 [WKS]</h2>
 <ul>
-<li><p>描述: 用来描述一个特定 IP 地址上特定通讯协议支持的 TCP/IP 服务，它提供 TCP 和 UDP 可使用性信息。如果服务器同时支持 TCP 和 UDP 的已知服务，或者有多个支持服务的 IP 地址，多个 WKS 记录会被使用</p></li>
-
-<li><p>语法: owner ttl class WKS address protocol service_list</p></li>
-
-<li><p>例子: example.microsoft.com. WKS 10.0.0.1 TCP ( telnet smtp ftp ) 　　在&rdquo;起始颁发机构&rdquo; SOA 中，记录了这个 Zone 中 DNS 服务器是那一台主机，也记录着负责本 zone 的管理员的邮件地址，如果以后在安装邮件服务器需要修改该信息时，注意将邮件地址中的 &ldquo;@&rdquo; 符改为句点 &ldquo;.&rdquo; ，因为 &ldquo;@&rdquo; 是保留字，代表 zone；另外，要使用域完整名称 FQDN，不要漏掉最后的句点。可以通过 &ldquo;zone→属性→起始颁发机构&rdquo;对管理员邮件地址进行修改。</p></li>
+<li>
+<p>描述: 用来描述一个特定 IP 地址上特定通讯协议支持的 TCP/IP 服务，它提供 TCP 和 UDP 可使用性信息。如果服务器同时支持 TCP 和 UDP 的已知服务，或者有多个支持服务的 IP 地址，多个 WKS 记录会被使用</p>
+</li>
+<li>
+<p>语法: owner ttl class WKS address protocol service_list</p>
+</li>
+<li>
+<p>例子: example.microsoft.com. WKS 10.0.0.1 TCP ( telnet smtp ftp ) 　　在&quot;起始颁发机构&rdquo; SOA 中，记录了这个 Zone 中 DNS 服务器是那一台主机，也记录着负责本 zone 的管理员的邮件地址，如果以后在安装邮件服务器需要修改该信息时，注意将邮件地址中的 &ldquo;@&rdquo; 符改为句点 &ldquo;.&rdquo; ，因为 &ldquo;@&rdquo; 是保留字，代表 zone；另外，要使用域完整名称 FQDN，不要漏掉最后的句点。可以通过 &ldquo;zone→属性→起始颁发机构&quot;对管理员邮件地址进行修改。</p>
+</li>
 </ul>
 
     </div>
@@ -338,7 +349,8 @@
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -355,7 +367,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
 
 
 <script type="application/javascript">

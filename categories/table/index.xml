@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>table on @EchoSence</title>
@@ -18,7 +18,7 @@
       <pubDate>Fri, 27 Sep 2019 22:58:35 +0800</pubDate>
       
       <guid>https://atovk.github.io/post/bigdata/kudu_table_schema_design/</guid>
-      <description>参考 kudu 官方指导手册 future Fast processing of OLAP workloads. &amp;gt; OLAP 级数数据处理能力 Integration with MapReduce, Spark and other Hadoop ecosystem components. &amp;gt; 可集成大数据常用组建(MR,spark,hive,impala,&amp;he</description>
+      <description>参考 kudu 官方指导手册 future Fast processing of OLAP workloads. OLAP 级数数据处理能力 Integration with MapReduce, Spark and other Hadoop ecosystem components. 可集成大数据常用组建(MR,spark,hive,impala,&amp;hell</description>
     </item>
     
   </channel>

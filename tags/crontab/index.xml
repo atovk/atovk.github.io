@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>crontab on @EchoSence</title>
@@ -18,7 +18,7 @@
       <pubDate>Fri, 27 Sep 2019 23:11:55 +0800</pubDate>
       
       <guid>https://atovk.github.io/post/linux/linux_ctontab_timely_operational/</guid>
-      <description>通过定时crontab 调用远程执行sql新建表结构 create_table.sh 1 2 3 4 5 6 7 8 9 10 11 12 13 #!/bin/bash # 生成明天的日期 tomorrow=$(date -d &amp;#34;+1 days&amp;#34; &amp;#34;+%Y%m%d&amp;#34;) echo next date: ${tomorrow} # sql文件脚本中的日期替</description>
+      <description>通过定时crontab 调用远程执行sql新建表结构 create_table.sh 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 #!/bin/bash # 生成明天的日期 tomorrow=$(date -d &amp;#34;+1 days&amp;#34; &amp;#34;+%Y%m%d&amp;#34;) echo next date: ${tomorrow} # sql文件脚本中的日</description>
     </item>
     
   </channel>

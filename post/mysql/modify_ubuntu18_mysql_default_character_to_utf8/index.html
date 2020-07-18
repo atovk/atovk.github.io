@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="5wkMIUrqNvgT67LD9lCnUf9Cf_iSd7EKyOkonH3ILPs" />
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.74.2 with theme even" />
 
 
 <link rel="canonical" href="https://atovk.github.io/post/mysql/modify_ubuntu18_mysql_default_character_to_utf8/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2019-01-20T00:52:59+08:00" />
 <meta itemprop="name" content="ubuntu18.xx 中修改 mysql 数据库默认字符编码">
 <meta itemprop="description" content="ubuntu18.xx 中修改 mysql 数据库默认字符编码 今天更换meriadb 为mysql 之后发现 springboot jpa存入数据库中的字符是乱码，看了下问题为mysql字符编码不是 u">
-
-
 <meta itemprop="datePublished" content="2019-01-20T00:52:59&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-20T00:52:59&#43;08:00" />
-<meta itemprop="wordCount" content="161">
+<meta itemprop="wordCount" content="162">
 
 
 
-<meta itemprop="keywords" content="mysql,springboot," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="mysql,springboot," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ubuntu18.xx 中修改 mysql 数据库默认字符编码"/>
 <meta name="twitter:description" content="ubuntu18.xx 中修改 mysql 数据库默认字符编码 今天更换meriadb 为mysql 之后发现 springboot jpa存入数据库中的字符是乱码，看了下问题为mysql字符编码不是 u"/>
 
@@ -132,7 +130,7 @@
             <a href="/categories/mysql/"> mysql </a>
             <a href="/categories/springboot/"> springboot </a>
             </div>
-          <span class="more-meta"> 161 words </span>
+          <span class="more-meta"> 162 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -142,35 +140,26 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#ubuntu18-xx-中修改-mysql-数据库默认字符编码">ubuntu18.xx 中修改 mysql 数据库默认字符编码</a>
-<ul>
-<li><a href="#ubuntu18-默认mysql配置文件地址">ubuntu18 默认mysql配置文件地址</a></li>
-<li><a href="#编辑文件内容">编辑文件内容</a></li>
-<li><a href="#重启mysql">重启mysql</a></li>
-<li><a href="#注意">注意</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#ubuntu18-默认mysql配置文件地址">ubuntu18 默认mysql配置文件地址</a></li>
+    <li><a href="#编辑文件内容">编辑文件内容</a></li>
+    <li><a href="#重启mysql">重启mysql</a></li>
+    <li><a href="#注意">注意</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h1 id="ubuntu18-xx-中修改-mysql-数据库默认字符编码">ubuntu18.xx 中修改 mysql 数据库默认字符编码</h1>
-
+      <h1 id="ubuntu18xx-中修改-mysql-数据库默认字符编码">ubuntu18.xx 中修改 mysql 数据库默认字符编码</h1>
 <ul>
 <li>今天更换meriadb 为mysql 之后发现 springboot jpa存入数据库中的字符是乱码，看了下问题为mysql字符编码不是 utf-8了</li>
 </ul>
-
 <h2 id="ubuntu18-默认mysql配置文件地址">ubuntu18 默认mysql配置文件地址</h2>
-
 <p>sudo vim /etc/mysql/conf.d/mysql.cnf</p>
-
 <h2 id="编辑文件内容">编辑文件内容</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -180,6 +169,7 @@
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="o">[</span>mysql<span class="o">]</span>
@@ -191,15 +181,13 @@ default-character-set<span class="o">=</span>utf8
 <span class="o">[</span>mysqld<span class="o">]</span>
 collation-server <span class="o">=</span> utf8_unicode_ci
 init-connect<span class="o">=</span><span class="s1">&#39;SET NAMES utf8&#39;</span>
-character-set-server <span class="o">=</span> utf8</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="重启mysql">重启mysql</h2>
+character-set-server <span class="o">=</span> utf8
 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="重启mysql">重启mysql</h2>
 <p>sudo service mysql restart</p>
-
 <h2 id="注意">注意</h2>
-
 <ul>
 <li>如果已经存在的库中乱码，手动重设字符编码/删除重建;</li>
 </ul>
@@ -280,7 +268,8 @@ character-set-server <span class="o">=</span> utf8</code></pre></td></tr></table
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -297,7 +286,10 @@ character-set-server <span class="o">=</span> utf8</code></pre></td></tr></table
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
 
 
 <script type="application/javascript">

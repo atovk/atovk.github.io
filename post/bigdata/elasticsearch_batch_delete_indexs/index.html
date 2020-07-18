@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="5wkMIUrqNvgT67LD9lCnUf9Cf_iSd7EKyOkonH3ILPs" />
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.74.2 with theme even" />
 
 
 <link rel="canonical" href="https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2019-09-28T14:43:11+08:00" />
 <meta itemprop="name" content="批量删除ES中无效的index / Elasticsearch batch delete indexs">
 <meta itemprop="description" content="批量自动删除 elasticsearch 中大量无效index">
-
-
 <meta itemprop="datePublished" content="2019-09-28T14:43:11&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-28T14:43:11&#43;08:00" />
-<meta itemprop="wordCount" content="241">
+<meta itemprop="wordCount" content="243">
 
 
 
-<meta itemprop="keywords" content="elasticsearch,delete,index,shell," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="elasticsearch,delete,index,shell," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="批量删除ES中无效的index / Elasticsearch batch delete indexs"/>
 <meta name="twitter:description" content="批量自动删除 elasticsearch 中大量无效index"/>
 
@@ -134,7 +132,7 @@
             <a href="/categories/index/"> index </a>
             <a href="/categories/shell/"> shell </a>
             </div>
-          <span class="more-meta"> 241 words </span>
+          <span class="more-meta"> 243 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -144,42 +142,37 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#正则获取所有无效index信息到备选删除记录文件中">正则获取所有无效index信息到备选删除记录文件中</a></li>
-<li><a href="#完整自动脚本如下">完整自动脚本如下</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#正则获取所有无效index信息到备选删除记录文件中">正则获取所有无效index信息到备选删除记录文件中</a></li>
+    <li><a href="#完整自动脚本如下">完整自动脚本如下</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<blockquote>
+      <blockquote>
 <p>通过elasticSearch 结合shell 批量删除 ES中大量无效index</p>
 </blockquote>
-
 <h2 id="正则获取所有无效index信息到备选删除记录文件中">正则获取所有无效index信息到备选删除记录文件中</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 通过 curl 获取 es 所有index信息，再通过 grep正则过滤出我们要删除的index，awk 只获取index名称 到 index.log 文件中</span>
-curl <span class="s2">&#34;</span><span class="si">${</span><span class="nv">server</span><span class="si">}</span><span class="s2">/_cat/indices&#34;</span> <span class="p">|</span> grep <span class="s1">&#39;real_time_sales_temporary_new_2019092408*&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span> &gt; index.log</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="完整自动脚本如下">完整自动脚本如下</h2>
+curl <span class="s2">&#34;</span><span class="si">${</span><span class="nv">server</span><span class="si">}</span><span class="s2">/_cat/indices&#34;</span> <span class="p">|</span> grep <span class="s1">&#39;real_time_sales_temporary_new_2019092408*&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span> &gt; index.log
 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="完整自动脚本如下">完整自动脚本如下</h2>
 <blockquote>
 <p>循环我们过滤出得无效index列表，执行 delete 操作</p>
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -194,6 +187,7 @@ curl <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ser
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
@@ -210,7 +204,9 @@ cat index.log <span class="p">|</span> <span class="k">while</span> <span class=
 <span class="k">do</span>
     <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">line</span><span class="si">}</span><span class="s2">&#34;</span>
     curl -XDELETE <span class="s2">&#34;</span><span class="si">${</span><span class="nv">server</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">line</span><span class="si">}</span><span class="s2">&#34;</span>
-<span class="k">done</span></code></pre></td></tr></table>
+<span class="k">done</span>
+
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -298,7 +294,8 @@ cat index.log <span class="p">|</span> <span class="k">while</span> <span class=
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -315,7 +312,10 @@ cat index.log <span class="p">|</span> <span class="k">while</span> <span class=
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
 
 
 <script type="application/javascript">

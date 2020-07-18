@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>elasticsearch on @EchoSence</title>
@@ -18,7 +18,7 @@
       <pubDate>Sat, 28 Sep 2019 14:43:11 +0800</pubDate>
       
       <guid>https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/</guid>
-      <description>通过elasticSearch 结合shell 批量删除 ES中大量无效index 正则获取所有无效index信息到备选删除记录文件中 1 2 # 通过 curl 获</description>
+      <description>通过elasticSearch 结合shell 批量删除 ES中大量无效index 正则获取所有无效index信息到备选删除记录文件中 1 2 3 # 通过 curl</description>
     </item>
     
   </channel>
