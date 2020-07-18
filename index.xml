@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Sat, 05 Oct 2019 13:17:24 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 14:27:27 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       
       <guid>https://atovk.github.io/about/</guid>
       <description>about 记录 跬步千里 计划今年考个网络安全员</description>
+    </item>
+    
+    <item>
+      <title>In manjaro linux to install mysql 8.*</title>
+      <link>https://atovk.github.io/post/mysql/manjaro_install_mysql8/</link>
+      <pubDate>Sat, 18 Jul 2020 14:27:27 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/mysql/manjaro_install_mysql8/</guid>
+      <description>in manjaro linux ,install mysql is so eazy!! follow down step by step. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 # arch linux auto install mysql sudo pacman -S mysql # random password sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql # empty password sudo mysqld --initialize-insecure --user=mysql --basedir=/usr --datadir=/var/lib/mysql # auto start service sudo systemctl enable mysqld.service sudo systemctl</description>
     </item>
     
     <item>

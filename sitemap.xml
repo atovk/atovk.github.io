@@ -10,7 +10,63 @@
   
   <url>
     <loc>https://atovk.github.io/</loc>
-    <lastmod>2019-10-05T13:17:24+08:00</lastmod>
+    <lastmod>2020-07-18T14:27:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/categories/</loc>
+    <lastmod>2020-07-18T14:27:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/post/mysql/manjaro_install_mysql8/</loc>
+    <lastmod>2020-07-18T14:27:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/tags/manjaro/</loc>
+    <lastmod>2020-07-18T14:27:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/categories/manjaro/</loc>
+    <lastmod>2020-07-18T14:27:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/tags/mysql/</loc>
+    <lastmod>2020-07-18T14:27:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/categories/mysql/</loc>
+    <lastmod>2020-07-18T14:27:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/post/</loc>
+    <lastmod>2020-07-18T14:27:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/tags/</loc>
+    <lastmod>2020-07-18T14:27:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://atovk.github.io/categories/</loc>
-    <lastmod>2019-10-05T13:17:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://atovk.github.io/tags/kindle/</loc>
     <lastmod>2019-10-05T13:17:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -45,20 +94,6 @@
   
   <url>
     <loc>https://atovk.github.io/categories/kindle/</loc>
-    <lastmod>2019-10-05T13:17:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://atovk.github.io/post/</loc>
-    <lastmod>2019-10-05T13:17:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://atovk.github.io/tags/</loc>
     <lastmod>2019-10-05T13:17:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -171,20 +206,6 @@
   
   <url>
     <loc>https://atovk.github.io/post/linux/linux_ctontab_timely_operational/</loc>
-    <lastmod>2019-09-27T23:11:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://atovk.github.io/tags/mysql/</loc>
-    <lastmod>2019-09-27T23:11:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://atovk.github.io/categories/mysql/</loc>
     <lastmod>2019-09-27T23:11:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

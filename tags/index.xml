@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Sat, 05 Oct 2019 13:17:24 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 14:27:27 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>manjaro</title>
+      <link>https://atovk.github.io/tags/manjaro/</link>
+      <pubDate>Sat, 18 Jul 2020 14:27:27 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/tags/manjaro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>https://atovk.github.io/tags/mysql/</link>
+      <pubDate>Sat, 18 Jul 2020 14:27:27 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>book</title>
@@ -90,15 +108,6 @@
       <pubDate>Fri, 27 Sep 2019 23:11:55 +0800</pubDate>
       
       <guid>https://atovk.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mysql</title>
-      <link>https://atovk.github.io/tags/mysql/</link>
-      <pubDate>Fri, 27 Sep 2019 23:11:55 +0800</pubDate>
-      
-      <guid>https://atovk.github.io/tags/mysql/</guid>
       <description></description>
     </item>
     
