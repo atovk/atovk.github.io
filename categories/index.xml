@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Sat, 18 Jul 2020 14:27:27 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 23:56:24 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>docker</title>
+      <link>https://atovk.github.io/categories/docker/</link>
+      <pubDate>Sat, 18 Jul 2020 23:56:24 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>manjaro</title>

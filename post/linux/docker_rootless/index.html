@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>In manjaro linux to install mysql 8.* - @EchoSence</title>
+  <title>Docker rootless - @EchoSence</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="atovk" /><meta name="description" content="eazy install mysql from manjaro" /><meta name="keywords" content="echosence, 技术分享, " />
+<meta name="author" content="atovk" /><meta name="description" content="rootless docker" /><meta name="keywords" content="echosence, 技术分享, " />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.74.2 with theme even" />
 
 
-<link rel="canonical" href="https://atovk.github.io/post/mysql/manjaro_install_mysql8/" />
+<link rel="canonical" href="https://atovk.github.io/post/linux/docker_rootless/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="In manjaro linux to install mysql 8.*" />
-<meta property="og:description" content="eazy install mysql from manjaro" />
+<meta property="og:title" content="Docker rootless" />
+<meta property="og:description" content="rootless docker" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://atovk.github.io/post/mysql/manjaro_install_mysql8/" />
-<meta property="article:published_time" content="2020-07-18T14:27:27+08:00" />
-<meta property="article:modified_time" content="2020-07-18T14:27:27+08:00" />
-<meta itemprop="name" content="In manjaro linux to install mysql 8.*">
-<meta itemprop="description" content="eazy install mysql from manjaro">
-<meta itemprop="datePublished" content="2020-07-18T14:27:27&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-18T14:27:27&#43;08:00" />
-<meta itemprop="wordCount" content="89">
+<meta property="og:url" content="https://atovk.github.io/post/linux/docker_rootless/" />
+<meta property="article:published_time" content="2020-07-18T23:56:24+08:00" />
+<meta property="article:modified_time" content="2020-07-18T23:56:24+08:00" />
+<meta itemprop="name" content="Docker rootless">
+<meta itemprop="description" content="rootless docker">
+<meta itemprop="datePublished" content="2020-07-18T23:56:24&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-18T23:56:24&#43;08:00" />
+<meta itemprop="wordCount" content="95">
 
 
 
-<meta itemprop="keywords" content="manjaro,mysql," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="In manjaro linux to install mysql 8.*"/>
-<meta name="twitter:description" content="eazy install mysql from manjaro"/>
+<meta itemprop="keywords" content="docker,rootless," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Docker rootless"/>
+<meta name="twitter:description" content="rootless docker"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -122,15 +122,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">In manjaro linux to install mysql 8.*</h1>
+      <h1 class="post-title">Docker rootless</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2020-07-18 </span>
         <div class="post-category">
-            <a href="/categories/manjaro/"> manjaro </a>
-            <a href="/categories/mysql/"> mysql </a>
+            <a href="/categories/docker/"> docker </a>
             </div>
-          <span class="more-meta"> 89 words </span>
+          <span class="more-meta"> 95 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -139,17 +138,12 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#error">error</a></li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      <blockquote>
-<p>in manjaro linux ,install mysql is so eazy!! follow down step by step.</p>
-</blockquote>
+      <p><a href="https://docs.docker.com/engine/security/rootless/">docker office rootless doc</a></p>
+<p><a href="https://medium.com/@tonistiigi/experimenting-with-rootless-docker-416c9ad8c0d6">rootless principle</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -171,39 +165,34 @@
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh">
-<span class="c1"># arch linux auto install mysql</span>
-sudo pacman -S mysql
+<span class="c1"># using office rootless shell script</span>
+curl -sSL https://get.docker.com/rootless <span class="p">|</span> sh
 
-<span class="c1"># random password</span>
-sudo mysqld --initialize --user<span class="o">=</span>mysql --basedir<span class="o">=</span>/usr --datadir<span class="o">=</span>/var/lib/mysql
+<span class="c1"># generally will be notice create `/etc/subuid` &amp; `/etc/subgid`</span>
 
-<span class="c1"># empty password</span>
-sudo mysqld --initialize-insecure --user<span class="o">=</span>mysql --basedir<span class="o">=</span>/usr --datadir<span class="o">=</span>/var/lib/mysql
-
-<span class="c1"># auto start service</span>
-sudo systemctl <span class="nb">enable</span> mysqld.service
-sudo systemctl daemon-reload
-sudo systemctl start mysqld.service
+sudo touch /etc/subuid
+sudo touch /etc/subgid
 
 
-<span class="c1"># login local mysql server</span>
-mysql -u root -p
+<span class="c1"># edit touch file</span>
+<span class="nb">echo</span> <span class="s2">&#34;`whoami`:`id -u`:65536&#34;</span> &gt;&gt; /etc/subuid
+<span class="nb">echo</span> <span class="s2">&#34;`whoami`:`id -u`:65536&#34;</span> &gt;&gt; /etc/subgid
 
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="error">error</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">
-ignore...
+<span class="c1"># reusing office rootless shell script</span>
+curl -sSL https://get.docker.com/rootless <span class="p">|</span> sh
+
+<span class="c1"># --user opt service</span>
+systemctl --user <span class="o">(</span>start<span class="p">|</span>stop<span class="p">|</span>restart<span class="o">)</span> docker
+
+<span class="c1"># success to rootless docker</span>
+docker ps
 
 </code></pre></td></tr></table>
 </div>
@@ -230,17 +219,13 @@ ignore...
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/manjaro/">manjaro</a>
-          <a href="/tags/mysql/">mysql</a>
+          <a href="/tags/docker/">docker</a>
+          <a href="/tags/rootless/">rootless</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/linux/docker_rootless/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Docker rootless</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/readbook/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/">
-            <span class="next-text nav-default">《人性的弱点》</span>
+        
+        <a class="next" href="/post/mysql/manjaro_install_mysql8/">
+            <span class="next-text nav-default">In manjaro linux to install mysql 8.*</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
