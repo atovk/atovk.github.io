@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Sat, 18 Jul 2020 23:56:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 23:29:45 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       
       <guid>https://atovk.github.io/about/</guid>
       <description>about 记录 跬步千里 计划今年考个网络安全员</description>
+    </item>
+    
+    <item>
+      <title>Change docker image mirror service</title>
+      <link>https://atovk.github.io/post/linux/change_docker_image_mirror_service/</link>
+      <pubDate>Fri, 24 Jul 2020 23:29:45 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/linux/change_docker_image_mirror_service/</guid>
+      <description>this change for china mainland docker users. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # create docker user config dir sudo mkdir -p /etc/docker # touch docker config file sudo tee /etc/docker/daemon.json &amp;lt;&amp;lt;-&amp;#39;EOF&amp;#39; { &amp;#34;registry-mirrors&amp;#34;: [ &amp;#34;https://1nj0zren.mirror.aliyuncs.com&amp;#34;, &amp;#34;https://docker.mirrors.ustc.edu.cn&amp;#34;, &amp;#34;http://f1361db2.m.daocloud.io&amp;#34;, &amp;#34;https://registry.docker-cn.com&amp;#34; ] } EOF # reload and restart docker sudo systemctl daemon-reload sudo systemctl restart docker</description>
     </item>
     
     <item>

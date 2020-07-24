@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="5wkMIUrqNvgT67LD9lCnUf9Cf_iSd7EKyOkonH3ILPs" />
 
 
-<meta name="generator" content="Hugo 0.74.2 with theme even" />
+<meta name="generator" content="Hugo 0.74.3 with theme even" />
 
 
 <link rel="canonical" href="https://atovk.github.io/" />
@@ -45,9 +45,10 @@
 <meta property="og:description" content="atovk‘s site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://atovk.github.io/" />
-<meta property="og:updated_time" content="2020-07-18T23:56:24+08:00" />
+<meta property="og:updated_time" content="2020-07-24T23:29:45+08:00" />
 <meta itemprop="name" content="@EchoSence">
-<meta itemprop="description" content="atovk‘s site."><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="atovk‘s site.">
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="@EchoSence"/>
 <meta name="twitter:description" content="atovk‘s site."/>
 
@@ -114,6 +115,31 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/linux/linux_ctontab_timely_operational/">linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-09-27 </span>
+      <div class="post-category">
+          <a href="/categories/linux/"> linux </a>
+          <a href="/categories/crontab/"> crontab </a>
+          <a href="/categories/mysql/"> mysql </a>
+          </div>
+        <span class="more-meta"> 201 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      通过定时crontab 调用远程执行sql新建表结构 create_table.sh 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 #!/bin/bash # 生成明天的日期 tomorrow=$(date -d &#34;+1 days&#34; &#34;+%Y%m%d&#34;) echo next date: ${tomorrow} # sql文件脚本中的日
+    </div>
+    <div class="read-more">
+      <a href="/post/linux/linux_ctontab_timely_operational/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/bigdata/kudu_table_schema_design/">kudu 表设计使用及限制 / Kudu table schema design and limited</a></h1>
@@ -210,29 +236,6 @@
     </div>
     <div class="read-more">
       <a href="/post/linux/linux_teminal_option/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/linux/domain_dns_info_detail/">域名解析类型详解 / Domain DNS info detail</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-09-13 </span>
-      <div class="post-category">
-          <a href="/categories/dns/"> DNS </a>
-          </div>
-        <span class="more-meta"> 1003 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      域名解析类型详解 1.主机[A]记录 描述: 主机地址记录。在 DNS 域名与 IP 地址之间建立映射关系 语法: owner class ttl A IP_v4_address 例子: host1.example.microsoft.com. IN A 127.0.0.1 2.别名[CNAME] 描
-    </div>
-    <div class="read-more">
-      <a href="/post/linux/domain_dns_info_detail/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
