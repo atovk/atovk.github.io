@@ -10,14 +10,49 @@
   
   <url>
     <loc>https://atovk.github.io/</loc>
-    <lastmod>2020-07-24T23:29:45+08:00</lastmod>
+    <lastmod>2020-09-05T17:16:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://atovk.github.io/categories/</loc>
-    <lastmod>2020-07-24T23:29:45+08:00</lastmod>
+    <lastmod>2020-09-05T17:16:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/tags/distributed/</loc>
+    <lastmod>2020-09-05T17:16:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/categories/distributed/</loc>
+    <lastmod>2020-09-05T17:16:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/post/distributed-systems/notes-on-distributed-systems-for-young-bloods/</loc>
+    <lastmod>2020-09-05T17:16:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/post/</loc>
+    <lastmod>2020-09-05T17:16:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://atovk.github.io/tags/</loc>
+    <lastmod>2020-09-05T17:16:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,20 +73,6 @@
   
   <url>
     <loc>https://atovk.github.io/categories/docker/</loc>
-    <lastmod>2020-07-24T23:29:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://atovk.github.io/post/</loc>
-    <lastmod>2020-07-24T23:29:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://atovk.github.io/tags/</loc>
     <lastmod>2020-07-24T23:29:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

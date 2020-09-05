@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ATOVK</copyright>
-    <lastBuildDate>Fri, 24 Jul 2020 23:29:45 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2020 17:16:03 +0800</lastBuildDate>
     
 	<atom:link href="https://atovk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Notes on Distributed Systems for Young Bloods - 分布式系统萌新忠告</title>
+      <link>https://atovk.github.io/post/distributed-systems/notes-on-distributed-systems-for-young-bloods/</link>
+      <pubDate>Sat, 05 Sep 2020 17:16:03 +0800</pubDate>
+      
+      <guid>https://atovk.github.io/post/distributed-systems/notes-on-distributed-systems-for-young-bloods/</guid>
+      <description>分布式系统萌新忠告 Notes on Distributed Systems for Young Bloods January 14, 2013 08:15:00 AM PST I’ve been thinking about the lessons distributed systems engineers learn on the job. A great deal of our instruction is through scars made by mistakes made in production traffic. These scars are useful reminders, sure, but it’d be better to have more</description>
+    </item>
     
     <item>
       <title>Change docker image mirror service</title>
