@@ -1,763 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>java通过oshi获取系统和硬件信息 / Oshi get system and hardware information - @EchoSence</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="atovk" /><meta name="description" content="通过" /><meta name="keywords" content="echosence, 技术分享, " />
-
-
-
-<meta name="google-site-verification" content="5wkMIUrqNvgT67LD9lCnUf9Cf_iSd7EKyOkonH3ILPs" />
-
-
-<meta name="generator" content="Hugo 0.74.3 with theme even" />
-
-
-<link rel="canonical" href="https://atovk.github.io/post/java/oshi_system_and_hardware_information/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="java通过oshi获取系统和硬件信息 / Oshi get system and hardware information" />
-<meta property="og:description" content="通过" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://atovk.github.io/post/java/oshi_system_and_hardware_information/" />
-<meta property="article:published_time" content="2019-09-27T22:42:49+08:00" />
-<meta property="article:modified_time" content="2019-09-27T22:42:49+08:00" />
-<meta itemprop="name" content="java通过oshi获取系统和硬件信息 / Oshi get system and hardware information">
-<meta itemprop="description" content="通过">
-<meta itemprop="datePublished" content="2019-09-27T22:42:49+08:00" />
-<meta itemprop="dateModified" content="2019-09-27T22:42:49+08:00" />
-<meta itemprop="wordCount" content="914">
-
-
-
-<meta itemprop="keywords" content="linux,java,monitor," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="java通过oshi获取系统和硬件信息 / Oshi get system and hardware information"/>
-<meta name="twitter:description" content="通过"/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">@EchoSence</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">@EchoSence</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">java通过oshi获取系统和硬件信息 / Oshi get system and hardware information</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2019-09-27 </span>
-        <div class="post-category">
-            <a href="/categories/linux/"> linux </a>
-            <a href="/categories/java/"> java </a>
-            <a href="/categories/monitor/"> monitor </a>
-            </div>
-          <span class="more-meta"> 914 words </span>
-          <span class="more-meta"> 2 mins read </span>
-        
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#maven-依赖引入">maven 依赖引入</a></li>
-    <li><a href="#api-操作">API 操作</a>
-      <ul>
-        <li><a href="#操作bios系统信息">操作BIOS系统信息</a></li>
-        <li><a href="#传感器信息">传感器信息</a></li>
-        <li><a href="#内存信息">内存信息</a></li>
-        <li><a href="#cpu-线程信息">CPU 线程信息</a></li>
-        <li><a href="#显示器信息">显示器信息</a></li>
-        <li><a href="#磁盘信息">磁盘信息</a></li>
-        <li><a href="#网卡信息">网卡信息</a></li>
-        <li><a href="#电源状态">电源状态</a></li>
-        <li><a href="#声卡信息">声卡信息</a></li>
-        <li><a href="#usb-信息">USB 信息</a></li>
-      </ul>
-    </li>
-    <li><a href="#系统进程相关信息">系统进程相关信息</a>
-      <ul>
-        <li><a href="#获取操作系统位数2364">获取操作系统位数（23/64）</a></li>
-        <li><a href="#获取指定线程下的子线程">获取指定线程下的子线程</a></li>
-        <li><a href="#获取操作系统类别">获取操作系统类别</a></li>
-        <li><a href="#获取当前系统下所有文件分区信息">获取当前系统下所有文件分区信息</a></li>
-        <li><a href="#系统生产厂家">系统生产厂家</a></li>
-        <li><a href="#获取网络参数">获取网络参数</a></li>
-        <li><a href="#获取指定进程信息">获取指定进程信息</a></li>
-        <li><a href="#获取但前系统中的进程数">获取但前系统中的进程数</a></li>
-        <li><a href="#根据排序规则-返回指定线程数">根据排序规则 返回指定线程数</a></li>
-        <li><a href="#获取进程id-list内所有近程">获取进程ID list内所有近程</a></li>
-        <li><a href="#获取系统内总线程数">获取系统内总线程数</a></li>
-        <li><a href="#获取系统启动时间">获取系统启动时间</a></li>
-        <li><a href="#获取系统版本信息">获取系统版本信息</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</div>
-    <div class="post-content">
-      <blockquote>
-<p>OSHI 是用java写的系统监控工具接口，提供主要的监控指标信息，具体接口作用如下：</p>
-</blockquote>
-<h2 id="maven-依赖引入">maven 依赖引入</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml">
-<span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>com.github.oshi<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>oshi-core<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>4.0.0<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="api-操作">API 操作</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="c1">// 初始化系统信息对象
-</span><span class="c1"></span><span class="n">SystemInfo</span> <span class="n">systemInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SystemInfo</span><span class="o">();</span>
-
-<span class="c1">// 获取硬件信息
-</span><span class="c1"></span><span class="n">HardwareAbstractionLayer</span> <span class="n">hardware</span> <span class="o">=</span> <span class="n">systemInfo</span><span class="o">.</span><span class="na">getHardware</span><span class="o">();</span>
-
-<span class="c1">// 获取操作系统进程相关信息
-</span><span class="c1"></span><span class="n">OperatingSystem</span> <span class="n">operatingSystem</span> <span class="o">=</span> <span class="n">systemInfo</span><span class="o">.</span><span class="na">getOperatingSystem</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="操作bios系统信息">操作BIOS系统信息</h3>
-<blockquote>
-<p>获取 BIOS 系统信息</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">ComputerSystem</span> <span class="n">computerSystem</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getComputerSystem</span><span class="o">();</span>
-<span class="n">Firmware</span> <span class="n">firmware</span> <span class="o">=</span> <span class="n">computerSystem</span><span class="o">.</span><span class="na">getFirmware</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">firmware</span><span class="o">.</span><span class="na">getName</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">description</span> <span class="o">=</span> <span class="n">firmware</span><span class="o">.</span><span class="na">getDescription</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">firmwareManufacturer</span> <span class="o">=</span> <span class="n">firmware</span><span class="o">.</span><span class="na">getManufacturer</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">releaseDate</span> <span class="o">=</span> <span class="n">firmware</span><span class="o">.</span><span class="na">getReleaseDate</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">firmwareVersion</span> <span class="o">=</span> <span class="n">firmware</span><span class="o">.</span><span class="na">getVersion</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="传感器信息">传感器信息</h3>
-<blockquote>
-<p>风扇/温度信息</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">Sensors</span> <span class="n">sensors</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getSensors</span><span class="o">();</span>
-<span class="kt">int</span><span class="o">[]</span> <span class="n">sensorsFanSpeeds</span> <span class="o">=</span> <span class="n">sensors</span><span class="o">.</span><span class="na">getFanSpeeds</span><span class="o">();</span>
-<span class="kt">double</span> <span class="n">sensorsCpuVoltage</span> <span class="o">=</span> <span class="n">sensors</span><span class="o">.</span><span class="na">getCpuVoltage</span><span class="o">();</span>
-<span class="kt">double</span> <span class="n">sensorsCpuTemperature</span> <span class="o">=</span> <span class="n">sensors</span><span class="o">.</span><span class="na">getCpuTemperature</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="内存信息">内存信息</h3>
-<blockquote>
-<p>获取硬件内存信息</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">GlobalMemory</span> <span class="n">memory</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getMemory</span><span class="o">();</span>
-
-<span class="kt">long</span> <span class="n">memoryTotal</span> <span class="o">=</span> <span class="n">memory</span><span class="o">.</span><span class="na">getTotal</span><span class="o">();</span>
-<span class="kt">long</span> <span class="n">memoryAvailable</span> <span class="o">=</span> <span class="n">memory</span><span class="o">.</span><span class="na">getAvailable</span><span class="o">();</span>
-<span class="kt">long</span> <span class="n">memoryPageSize</span> <span class="o">=</span> <span class="n">memory</span><span class="o">.</span><span class="na">getPageSize</span><span class="o">();</span>
-<span class="n">VirtualMemory</span> <span class="n">memoryVirtualMemory</span> <span class="o">=</span> <span class="n">memory</span><span class="o">.</span><span class="na">getVirtualMemory</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="cpu-线程信息">CPU 线程信息</h3>
-<blockquote>
-<p>获取机器硬件执行，cpu频率/型号/核心相关信息</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">CentralProcessor</span> <span class="n">processor</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getProcessor</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="显示器信息">显示器信息</h3>
-<blockquote>
-<p>显示器相关型号/分辨率之类信息</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">Display</span><span class="o">[]</span> <span class="n">displays</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getDisplays</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="磁盘信息">磁盘信息</h3>
-<blockquote>
-<p>当前磁盘的硬件信息，读写状态，分区信息等</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">HWDiskStore</span><span class="o">[]</span> <span class="n">diskStores</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getDiskStores</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="网卡信息">网卡信息</h3>
-<blockquote>
-<p>获取网卡详细信息，mac/ip4/6地址，读写状态，中断/错误等信息</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">NetworkIF</span><span class="o">[]</span> <span class="n">networkIFs</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getNetworkIFs</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="电源状态">电源状态</h3>
-<blockquote>
-<p>&hellip;</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">PowerSource</span><span class="o">[]</span> <span class="n">powerSources</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getPowerSources</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="声卡信息">声卡信息</h3>
-<blockquote>
-<p>获取名称/描述等</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">SoundCard</span><span class="o">[]</span> <span class="n">soundCards</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getSoundCards</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="usb-信息">USB 信息</h3>
-<blockquote>
-<p>获取USB接口信息，可以过滤出正在使用的USB接口，及相关详细信息，true 树形返回</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">UsbDevice</span><span class="o">[]</span> <span class="n">usbDevices</span> <span class="o">=</span> <span class="n">hardware</span><span class="o">.</span><span class="na">getUsbDevices</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="系统进程相关信息">系统进程相关信息</h2>
-<h3 id="获取操作系统位数2364">获取操作系统位数（23/64）</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="kt">int</span> <span class="n">bitness</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getBitness</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取指定线程下的子线程">获取指定线程下的子线程</h3>
-<blockquote>
-<p>传入父进程ID，设置返回进程数量及进程排序方法，返回该父进程下指定数量排序下的子进程数</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">OSProcess</span><span class="o">[]</span> <span class="n">childProcesses</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getChildProcesses</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">OperatingSystem</span><span class="o">.</span><span class="na">ProcessSort</span><span class="o">.</span><span class="na">CPU</span><span class="o">);</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取操作系统类别">获取操作系统类别</h3>
-<blockquote>
-<p>linux/MACOS/unix/windows 等</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">String</span> <span class="n">family</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getFamily</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取当前系统下所有文件分区信息">获取当前系统下所有文件分区信息</h3>
-<blockquote>
-<p>获取文件系统分区信息，剩余空间，挂载信息等 系统存储状态</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">FileSystem</span> <span class="n">fileSystem</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getFileSystem</span><span class="o">();</span>
-<span class="n">OSFileStore</span><span class="o">[]</span> <span class="n">fileStores</span> <span class="o">=</span> <span class="n">fileSystem</span><span class="o">.</span><span class="na">getFileStores</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="系统生产厂家">系统生产厂家</h3>
-<blockquote>
-<p>能获取系统厂商信息</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">String</span> <span class="n">manufacturer</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getManufacturer</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取网络参数">获取网络参数</h3>
-<blockquote>
-<p>系统中网卡信息，dns信息，域名信息，ip4/6信息</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">NetworkParams</span> <span class="n">networkParams</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getNetworkParams</span><span class="o">();</span>
-
-<span class="n">String</span><span class="o">[]</span> <span class="n">dnsServers</span> <span class="o">=</span> <span class="n">networkParams</span><span class="o">.</span><span class="na">getDnsServers</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">domainName</span> <span class="o">=</span> <span class="n">networkParams</span><span class="o">.</span><span class="na">getDomainName</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">hostName</span> <span class="o">=</span> <span class="n">networkParams</span><span class="o">.</span><span class="na">getHostName</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">ipv4DefaultGateway</span> <span class="o">=</span> <span class="n">networkParams</span><span class="o">.</span><span class="na">getIpv4DefaultGateway</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">ipv6DefaultGateway</span> <span class="o">=</span> <span class="n">networkParams</span><span class="o">.</span><span class="na">getIpv6DefaultGateway</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取指定进程信息">获取指定进程信息</h3>
-<blockquote>
-<p>传入进程号，获取该进程详细信息，所属组/用户/状态等</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">OSProcess</span> <span class="n">process</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getProcess</span><span class="o">(</span><span class="n">1121</span><span class="o">);</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取但前系统中的进程数">获取但前系统中的进程数</h3>
-<blockquote>
-<p>获取当前系统中所有进程数</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="kt">int</span> <span class="n">processCount</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getProcessCount</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="根据排序规则-返回指定线程数">根据排序规则 返回指定线程数</h3>
-<blockquote>
-<p>根据排序规则 返回指定线程数</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">OSProcess</span><span class="o">[]</span> <span class="n">processes</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getProcesses</span><span class="o">(</span><span class="n">10</span><span class="o">,</span> <span class="n">OperatingSystem</span><span class="o">.</span><span class="na">ProcessSort</span><span class="o">.</span><span class="na">CPU</span><span class="o">);</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取进程id-list内所有近程">获取进程ID list内所有近程</h3>
-<blockquote>
-<p>返回指定进程ID下所有进程实例</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">List</span><span class="o">&lt;</span><span class="n">OSProcess</span><span class="o">&gt;</span> <span class="n">processList</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getProcesses</span><span class="o">(</span><span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;());</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取系统内总线程数">获取系统内总线程数</h3>
-<blockquote>
-<p>获取系统内所有线程句柄数</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="kt">int</span> <span class="n">threadCount</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getThreadCount</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取系统启动时间">获取系统启动时间</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="kt">long</span> <span class="n">systemBootTime</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getSystemBootTime</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="获取系统版本信息">获取系统版本信息</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
-<span class="n">OperatingSystemVersion</span> <span class="n">version</span> <span class="o">=</span> <span class="n">operatingSystem</span><span class="o">.</span><span class="na">getVersion</span><span class="o">();</span>
-
-</code></pre></td></tr></table>
-</div>
-</div>
-    </div>
-
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">atovk</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">
-        2019-09-27
-        
-    </span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">License</span>
-    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a></span>
-  </p>
-</div>
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/linux/">linux</a>
-          <a href="/tags/java/">java</a>
-          <a href="/tags/monitor/">monitor</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/post/bigdata/kudu_table_schema_design/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">kudu 表设计使用及限制 / Kudu table schema design and limited</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/java/java_jdbc_example_holder/">
-            <span class="next-text nav-default">JDBC链接各种数据库的例子 / Java jdbc example holder</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'echosence';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:neatovk@gmail.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://github.com/atovk" class="iconfont icon-github" title="github"></a>
-  <a href="https://atovk.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">ATOVK</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-
-
-
-<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-132738029-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-
-
-</body>
-</html>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>java通过oshi获取系统和硬件信息 / Oshi get system and hardware information - @EchoSence</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="atovk"><meta name=description content="通过"><meta name=keywords content="echosence,技术分享,"><meta name=google-site-verification content="5wkMIUrqNvgT67LD9lCnUf9Cf_iSd7EKyOkonH3ILPs"><meta name=generator content="Hugo 0.100.2 with theme even"><link rel=canonical href=https://atovk.github.io/post/java/oshi_system_and_hardware_information/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="java通过oshi获取系统和硬件信息 / Oshi get system and hardware information"><meta property="og:description" content="通过"><meta property="og:type" content="article"><meta property="og:url" content="https://atovk.github.io/post/java/oshi_system_and_hardware_information/"><meta property="article:section" content="post"><meta property="article:published_time" content="2019-09-27T22:42:49+08:00"><meta property="article:modified_time" content="2019-09-27T22:42:49+08:00"><meta itemprop=name content="java通过oshi获取系统和硬件信息 / Oshi get system and hardware information"><meta itemprop=description content="通过"><meta itemprop=datePublished content="2019-09-27T22:42:49+08:00"><meta itemprop=dateModified content="2019-09-27T22:42:49+08:00"><meta itemprop=wordCount content="889"><meta itemprop=keywords content="linux,java,monitor,"><meta name=twitter:card content="summary"><meta name=twitter:title content="java通过oshi获取系统和硬件信息 / Oshi get system and hardware information"><meta name=twitter:description content="通过"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>@EchoSence</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a><a href=/about/><li class=mobile-menu-item>About</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>@EchoSence</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li><li class=menu-item><a class=menu-item-link href=/about/>About</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>java通过oshi获取系统和硬件信息 / Oshi get system and hardware information</h1><div class=post-meta><span class=post-time>2019-09-27</span><div class=post-category><a href=/categories/linux/>linux</a>
+<a href=/categories/java/>java</a>
+<a href=/categories/monitor/>monitor</a></div><span class=more-meta>889 words</span>
+<span class=more-meta>2 mins read</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>Contents</h2><div class="post-toc-content always-active"><nav id=TableOfContents><ul><li><a href=#maven-依赖引入>maven 依赖引入</a></li><li><a href=#api-操作>API 操作</a><ul><li><a href=#操作bios系统信息>操作BIOS系统信息</a></li><li><a href=#传感器信息>传感器信息</a></li><li><a href=#内存信息>内存信息</a></li><li><a href=#cpu-线程信息>CPU 线程信息</a></li><li><a href=#显示器信息>显示器信息</a></li><li><a href=#磁盘信息>磁盘信息</a></li><li><a href=#网卡信息>网卡信息</a></li><li><a href=#电源状态>电源状态</a></li><li><a href=#声卡信息>声卡信息</a></li><li><a href=#usb-信息>USB 信息</a></li></ul></li><li><a href=#系统进程相关信息>系统进程相关信息</a><ul><li><a href=#获取操作系统位数2364>获取操作系统位数（23/64）</a></li><li><a href=#获取指定线程下的子线程>获取指定线程下的子线程</a></li><li><a href=#获取操作系统类别>获取操作系统类别</a></li><li><a href=#获取当前系统下所有文件分区信息>获取当前系统下所有文件分区信息</a></li><li><a href=#系统生产厂家>系统生产厂家</a></li><li><a href=#获取网络参数>获取网络参数</a></li><li><a href=#获取指定进程信息>获取指定进程信息</a></li><li><a href=#获取但前系统中的进程数>获取但前系统中的进程数</a></li><li><a href=#根据排序规则-返回指定线程数>根据排序规则 返回指定线程数</a></li><li><a href=#获取进程id-list内所有近程>获取进程ID list内所有近程</a></li><li><a href=#获取系统内总线程数>获取系统内总线程数</a></li><li><a href=#获取系统启动时间>获取系统启动时间</a></li><li><a href=#获取系统版本信息>获取系统版本信息</a></li></ul></li></ul></nav></div></div><div class=post-content><blockquote><p>OSHI 是用java写的系统监控工具接口，提供主要的监控指标信息，具体接口作用如下：</p></blockquote><h2 id=maven-依赖引入>maven 依赖引入</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nt>&lt;dependency&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&lt;groupId&gt;</span>com.github.oshi<span class=nt>&lt;/groupId&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&lt;artifactId&gt;</span>oshi-core<span class=nt>&lt;/artifactId&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&lt;version&gt;</span>4.0.0<span class=nt>&lt;/version&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/dependency&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=api-操作>API 操作</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 初始化系统信息对象
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>SystemInfo</span> <span class=n>systemInfo</span> <span class=o>=</span> <span class=k>new</span> <span class=n>SystemInfo</span><span class=o>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 获取硬件信息
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>HardwareAbstractionLayer</span> <span class=n>hardware</span> <span class=o>=</span> <span class=n>systemInfo</span><span class=o>.</span><span class=na>getHardware</span><span class=o>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 获取操作系统进程相关信息
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>OperatingSystem</span> <span class=n>operatingSystem</span> <span class=o>=</span> <span class=n>systemInfo</span><span class=o>.</span><span class=na>getOperatingSystem</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=操作bios系统信息>操作BIOS系统信息</h3><blockquote><p>获取 BIOS 系统信息</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>ComputerSystem</span> <span class=n>computerSystem</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getComputerSystem</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>Firmware</span> <span class=n>firmware</span> <span class=o>=</span> <span class=n>computerSystem</span><span class=o>.</span><span class=na>getFirmware</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>name</span> <span class=o>=</span> <span class=n>firmware</span><span class=o>.</span><span class=na>getName</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>description</span> <span class=o>=</span> <span class=n>firmware</span><span class=o>.</span><span class=na>getDescription</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>firmwareManufacturer</span> <span class=o>=</span> <span class=n>firmware</span><span class=o>.</span><span class=na>getManufacturer</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>releaseDate</span> <span class=o>=</span> <span class=n>firmware</span><span class=o>.</span><span class=na>getReleaseDate</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>firmwareVersion</span> <span class=o>=</span> <span class=n>firmware</span><span class=o>.</span><span class=na>getVersion</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=传感器信息>传感器信息</h3><blockquote><p>风扇/温度信息</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>Sensors</span> <span class=n>sensors</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getSensors</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span><span class=o>[]</span> <span class=n>sensorsFanSpeeds</span> <span class=o>=</span> <span class=n>sensors</span><span class=o>.</span><span class=na>getFanSpeeds</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=kt>double</span> <span class=n>sensorsCpuVoltage</span> <span class=o>=</span> <span class=n>sensors</span><span class=o>.</span><span class=na>getCpuVoltage</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=kt>double</span> <span class=n>sensorsCpuTemperature</span> <span class=o>=</span> <span class=n>sensors</span><span class=o>.</span><span class=na>getCpuTemperature</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=内存信息>内存信息</h3><blockquote><p>获取硬件内存信息</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>GlobalMemory</span> <span class=n>memory</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getMemory</span><span class=o>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>long</span> <span class=n>memoryTotal</span> <span class=o>=</span> <span class=n>memory</span><span class=o>.</span><span class=na>getTotal</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=kt>long</span> <span class=n>memoryAvailable</span> <span class=o>=</span> <span class=n>memory</span><span class=o>.</span><span class=na>getAvailable</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=kt>long</span> <span class=n>memoryPageSize</span> <span class=o>=</span> <span class=n>memory</span><span class=o>.</span><span class=na>getPageSize</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>VirtualMemory</span> <span class=n>memoryVirtualMemory</span> <span class=o>=</span> <span class=n>memory</span><span class=o>.</span><span class=na>getVirtualMemory</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=cpu-线程信息>CPU 线程信息</h3><blockquote><p>获取机器硬件执行，cpu频率/型号/核心相关信息</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>CentralProcessor</span> <span class=n>processor</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getProcessor</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=显示器信息>显示器信息</h3><blockquote><p>显示器相关型号/分辨率之类信息</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>Display</span><span class=o>[]</span> <span class=n>displays</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getDisplays</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=磁盘信息>磁盘信息</h3><blockquote><p>当前磁盘的硬件信息，读写状态，分区信息等</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>HWDiskStore</span><span class=o>[]</span> <span class=n>diskStores</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getDiskStores</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=网卡信息>网卡信息</h3><blockquote><p>获取网卡详细信息，mac/ip4/6地址，读写状态，中断/错误等信息</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>NetworkIF</span><span class=o>[]</span> <span class=n>networkIFs</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getNetworkIFs</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=电源状态>电源状态</h3><blockquote><p>&mldr;</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>PowerSource</span><span class=o>[]</span> <span class=n>powerSources</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getPowerSources</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=声卡信息>声卡信息</h3><blockquote><p>获取名称/描述等</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>SoundCard</span><span class=o>[]</span> <span class=n>soundCards</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getSoundCards</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=usb-信息>USB 信息</h3><blockquote><p>获取USB接口信息，可以过滤出正在使用的USB接口，及相关详细信息，true 树形返回</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>UsbDevice</span><span class=o>[]</span> <span class=n>usbDevices</span> <span class=o>=</span> <span class=n>hardware</span><span class=o>.</span><span class=na>getUsbDevices</span><span class=o>(</span><span class=kc>true</span><span class=o>);</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=系统进程相关信息>系统进程相关信息</h2><h3 id=获取操作系统位数2364>获取操作系统位数（23/64）</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>bitness</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getBitness</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取指定线程下的子线程>获取指定线程下的子线程</h3><blockquote><p>传入父进程ID，设置返回进程数量及进程排序方法，返回该父进程下指定数量排序下的子进程数</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>OSProcess</span><span class=o>[]</span> <span class=n>childProcesses</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getChildProcesses</span><span class=o>(</span><span class=n>1</span><span class=o>,</span> <span class=n>2</span><span class=o>,</span> <span class=n>OperatingSystem</span><span class=o>.</span><span class=na>ProcessSort</span><span class=o>.</span><span class=na>CPU</span><span class=o>);</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取操作系统类别>获取操作系统类别</h3><blockquote><p>linux/MACOS/unix/windows 等</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>family</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getFamily</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取当前系统下所有文件分区信息>获取当前系统下所有文件分区信息</h3><blockquote><p>获取文件系统分区信息，剩余空间，挂载信息等 系统存储状态</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>FileSystem</span> <span class=n>fileSystem</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getFileSystem</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>OSFileStore</span><span class=o>[]</span> <span class=n>fileStores</span> <span class=o>=</span> <span class=n>fileSystem</span><span class=o>.</span><span class=na>getFileStores</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=系统生产厂家>系统生产厂家</h3><blockquote><p>能获取系统厂商信息</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>manufacturer</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getManufacturer</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取网络参数>获取网络参数</h3><blockquote><p>系统中网卡信息，dns信息，域名信息，ip4/6信息</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>NetworkParams</span> <span class=n>networkParams</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getNetworkParams</span><span class=o>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>String</span><span class=o>[]</span> <span class=n>dnsServers</span> <span class=o>=</span> <span class=n>networkParams</span><span class=o>.</span><span class=na>getDnsServers</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>domainName</span> <span class=o>=</span> <span class=n>networkParams</span><span class=o>.</span><span class=na>getDomainName</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>hostName</span> <span class=o>=</span> <span class=n>networkParams</span><span class=o>.</span><span class=na>getHostName</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>ipv4DefaultGateway</span> <span class=o>=</span> <span class=n>networkParams</span><span class=o>.</span><span class=na>getIpv4DefaultGateway</span><span class=o>();</span>
+</span></span><span class=line><span class=cl><span class=n>String</span> <span class=n>ipv6DefaultGateway</span> <span class=o>=</span> <span class=n>networkParams</span><span class=o>.</span><span class=na>getIpv6DefaultGateway</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取指定进程信息>获取指定进程信息</h3><blockquote><p>传入进程号，获取该进程详细信息，所属组/用户/状态等</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>OSProcess</span> <span class=n>process</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getProcess</span><span class=o>(</span><span class=n>1121</span><span class=o>);</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取但前系统中的进程数>获取但前系统中的进程数</h3><blockquote><p>获取当前系统中所有进程数</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>processCount</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getProcessCount</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=根据排序规则-返回指定线程数>根据排序规则 返回指定线程数</h3><blockquote><p>根据排序规则 返回指定线程数</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>OSProcess</span><span class=o>[]</span> <span class=n>processes</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getProcesses</span><span class=o>(</span><span class=n>10</span><span class=o>,</span> <span class=n>OperatingSystem</span><span class=o>.</span><span class=na>ProcessSort</span><span class=o>.</span><span class=na>CPU</span><span class=o>);</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取进程id-list内所有近程>获取进程ID list内所有近程</h3><blockquote><p>返回指定进程ID下所有进程实例</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>List</span><span class=o>&lt;</span><span class=n>OSProcess</span><span class=o>&gt;</span> <span class=n>processList</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getProcesses</span><span class=o>(</span><span class=k>new</span> <span class=n>ArrayList</span><span class=o>&lt;&gt;());</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取系统内总线程数>获取系统内总线程数</h3><blockquote><p>获取系统内所有线程句柄数</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>threadCount</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getThreadCount</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取系统启动时间>获取系统启动时间</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>long</span> <span class=n>systemBootTime</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getSystemBootTime</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=获取系统版本信息>获取系统版本信息</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>OperatingSystemVersion</span> <span class=n>version</span> <span class=o>=</span> <span class=n>operatingSystem</span><span class=o>.</span><span class=na>getVersion</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
+<span class=item-content>atovk</span></p><p class=copyright-item><span class=item-title>LastMod</span>
+<span class=item-content>2019-09-27</span></p><p class=copyright-item><span class=item-title>License</span>
+<span class=item-content><a rel="license noopener" href=https://creativecommons.org/licenses/by-sa/4.0 target=_blank>CC BY-SA 4.0</a></span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/linux/>linux</a>
+<a href=/tags/java/>java</a>
+<a href=/tags/monitor/>monitor</a></div><nav class=post-nav><a class=prev href=/post/bigdata/kudu_table_schema_design/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">kudu 表设计使用及限制 / Kudu table schema design and limited</span>
+<span class="prev-text nav-mobile">Prev</span></a>
+<a class=next href=/post/java/java_jdbc_example_holder/><span class="next-text nav-default">JDBC链接各种数据库的例子 / Java jdbc example holder</span>
+<span class="next-text nav-mobile">Next</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname==='localhost')return;var t,e=document.createElement('script');e.type='text/javascript',e.async=!0,t='echosence',e.src='//'+t+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:neatovk@gmail.com class="iconfont icon-email" title=email></a>
+<a href=https://github.com/atovk class="iconfont icon-github" title=github></a>
+<a href=https://atovk.github.io/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a></span>
+<span class=division>|</span>
+<span class=theme-info>Theme -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span>
+<span class=copyright-year>&copy;
+2019 -
+2022<span class=heart><i class="iconfont icon-heart"></i></span><span>ATOVK</span></span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-132738029-1','auto'),ga('set','anonymizeIp',!0),ga('send','pageview'))</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
