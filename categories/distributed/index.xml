@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Distributed on ATOVK</title>
+    <link>https://atovk.github.io/categories/distributed/</link>
+    <description>Recent content in Distributed on ATOVK</description>
+    <image>
+      <title>ATOVK</title>
+      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Sep 2020 17:16:03 +0800</lastBuildDate>
+    <atom:link href="https://atovk.github.io/categories/distributed/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on Distributed Systems for Young Bloods - 分布式系统忠告</title>
+      <link>https://atovk.github.io/post/distributed-systems/notes-on-distributed-systems-for-young-bloods/</link>
+      <pubDate>Sat, 05 Sep 2020 17:16:03 +0800</pubDate>
+      <guid>https://atovk.github.io/post/distributed-systems/notes-on-distributed-systems-for-young-bloods/</guid>
+      <description>Notes on Distributed Systems for Young Bloods 分布式系统忠告</description>
+    </item>
+  </channel>
+</rss>

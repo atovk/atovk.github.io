@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Social Media Mining on ATOVK</title>
+    <link>https://atovk.github.io/categories/social-media-mining/</link>
+    <description>Recent content in Social Media Mining on ATOVK</description>
+    <image>
+      <title>ATOVK</title>
+      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Mar 2025 01:06:56 +0800</lastBuildDate>
+    <atom:link href="https://atovk.github.io/categories/social-media-mining/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network Centrality</title>
+      <link>https://atovk.github.io/post/asu/cse598/network_centrality/</link>
+      <pubDate>Sat, 29 Mar 2025 01:06:56 +0800</pubDate>
+      <guid>https://atovk.github.io/post/asu/cse598/network_centrality/</guid>
+      <description>&lt;h3 id=&#34;1-网络中心性的重要性&#34;&gt;&lt;strong&gt;1. 网络中心性的重要性&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;核心问题&lt;/strong&gt;：如何衡量网络中的中心人物或网红（如网页排名、社交媒体影响力）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实际案例&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Klout网站&lt;/strong&gt;：通过算法计算用户影响力评分，但因争议（如巴菲特评分仅36）于2018年关闭，反映影响力评估的复杂性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中国社会信用体系&lt;/strong&gt;：基于社交媒体行为数据对个人信用评分，影响实际生活（如出行限制）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-度中心性degree-centrality&#34;&gt;&lt;strong&gt;2. 度中心性（Degree Centrality）&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：节点的度数（即连接的边数）直接反映其在网络中的重要性。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;入度（In-Degree）&lt;/strong&gt;：指向该节点的边数，代表声望（如被点赞次数）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;出度（Out-Degree）&lt;/strong&gt;：该节点指向其他节点的边数，代表合群性（如主动点赞他人）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;归一化处理&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;按最大可能度数&lt;/strong&gt;：度数除以节点总数减一（(n-1)），结果范围为(0 \sim 1)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;按实际最大度数&lt;/strong&gt;：度数除以当前图中的最大度数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;按总度数&lt;/strong&gt;：度数除以总边数的两倍（(2m)）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-有向图与无向图的度中心性&#34;&gt;&lt;strong&gt;3. 有向图与无向图的度中心性&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;有向图&lt;/strong&gt;：需区分入度和出度，入度更能反映影响力（如社交网络中被关注数）。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;：某节点入度3、出度2，归一化后入度中心性为(3/(n-1))。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无向图&lt;/strong&gt;：度数为无向边数，直接计算归一化值。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;：某节点度数5，归一化后中心性为(5/(n-1))。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-实际案例分析&#34;&gt;&lt;strong&gt;4. 实际案例分析&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;有向图示例&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;节点A入度1、出度3，归一化出度为(3/6 = 0.5)。&lt;/li&gt;
+&lt;li&gt;节点C入度2、出度3，归一化出度为(3/6 = 0.5)，与A并列第一。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无向图示例&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;节点C度数5，归一化中心性为(5/6 \approx 0.83)，排名第一。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-度中心性的局限性&#34;&gt;&lt;strong&gt;5. 度中心性的局限性&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;忽略连接质量&lt;/strong&gt;：仅关注数量，未考虑边的权重或影响力（如PageRank算法通过链接质量排序）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;规模敏感性&lt;/strong&gt;：不同规模网络的度数绝对值无法直接比较，需依赖归一化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-社交媒体应用&#34;&gt;&lt;strong&gt;6. 社交媒体应用&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据收集与商业价值&lt;/strong&gt;：社交媒体平台通过用户行为数据（如点赞、评论）分析影响力，用于精准营销。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;未来方向&lt;/strong&gt;：需结合其他中心性指标（如介数中心性、特征向量中心性）以更全面评估节点重要性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：度中心性是衡量网络中心性的基础方法，通过节点度数和归一化处理可快速评估影响力。但其局限性需结合其他方法改进，以适应复杂网络场景。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

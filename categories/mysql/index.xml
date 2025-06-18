@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mysql on ATOVK</title>
+    <link>https://atovk.github.io/categories/mysql/</link>
+    <description>Recent content in Mysql on ATOVK</description>
+    <image>
+      <title>ATOVK</title>
+      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Jul 2020 14:27:27 +0800</lastBuildDate>
+    <atom:link href="https://atovk.github.io/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>In manjaro linux to install mysql 8.*</title>
+      <link>https://atovk.github.io/post/mysql/manjaro_install_mysql8/</link>
+      <pubDate>Sat, 18 Jul 2020 14:27:27 +0800</pubDate>
+      <guid>https://atovk.github.io/post/mysql/manjaro_install_mysql8/</guid>
+      <description>eazy install mysql from manjaro</description>
+    </item>
+    <item>
+      <title>linux下crontab定时在mysql中生成明日需要使用的空表 / Timely operational on linux crontab</title>
+      <link>https://atovk.github.io/post/linux/linux_ctontab_timely_operational/</link>
+      <pubDate>Fri, 27 Sep 2019 23:11:55 +0800</pubDate>
+      <guid>https://atovk.github.io/post/linux/linux_ctontab_timely_operational/</guid>
+      <description>使用crontab定时操作 某些任务: mysql定时新建空表</description>
+    </item>
+    <item>
+      <title>ubuntu18.xx 中修改 mysql 数据库默认字符编码</title>
+      <link>https://atovk.github.io/post/mysql/modify_ubuntu18_mysql_default_character_to_utf8/</link>
+      <pubDate>Sun, 20 Jan 2019 00:52:59 +0800</pubDate>
+      <guid>https://atovk.github.io/post/mysql/modify_ubuntu18_mysql_default_character_to_utf8/</guid>
+      <description>&lt;h1 id=&#34;ubuntu18xx-中修改-mysql-数据库默认字符编码&#34;&gt;ubuntu18.xx 中修改 mysql 数据库默认字符编码&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;今天更换meriadb 为mysql 之后发现 springboot jpa存入数据库中的字符是乱码，看了下问题为mysql字符编码不是 utf-8了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ubuntu18-默认mysql配置文件地址&#34;&gt;ubuntu18 默认mysql配置文件地址&lt;/h2&gt;
+&lt;p&gt;sudo vim /etc/mysql/conf.d/mysql.cnf&lt;/p&gt;
+&lt;h2 id=&#34;编辑文件内容&#34;&gt;编辑文件内容&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;mysql&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;default-character-set&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;utf8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;client&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;default-character-set&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;utf8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;mysqld&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;collation-server &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; utf8_unicode_ci
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;init-connect&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;SET NAMES utf8&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;character-set-server &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; utf8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;重启mysql&#34;&gt;重启mysql&lt;/h2&gt;
+&lt;p&gt;sudo service mysql restart&lt;/p&gt;
+&lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果已经存在的库中乱码，手动重设字符编码/删除重建;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

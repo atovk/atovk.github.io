@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Domain on ATOVK</title>
+    <link>https://atovk.github.io/tags/domain/</link>
+    <description>Recent content in Domain on ATOVK</description>
+    <image>
+      <title>ATOVK</title>
+      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Sep 2019 02:04:31 +0800</lastBuildDate>
+    <atom:link href="https://atovk.github.io/tags/domain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>域名解析类型详解 / Domain DNS info detail</title>
+      <link>https://atovk.github.io/post/linux/domain_dns_info_detail/</link>
+      <pubDate>Fri, 13 Sep 2019 02:04:31 +0800</pubDate>
+      <guid>https://atovk.github.io/post/linux/domain_dns_info_detail/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;域名解析类型详解&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;1主机a记录&#34;&gt;1.主机[A]记录&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;描述: 主机地址记录。在 DNS 域名与 IP 地址之间建立映射关系&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法:  owner class ttl A IP_v4_address&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;例子: host1.example.microsoft.com. IN A 127.0.0.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2别名cname&#34;&gt;2.别名[CNAME]&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;描述: 用来表示用在该区域中的其它资源记录类型中已指定名称的替补或别名 DNS 域名。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法: owner ttl class AFSDB subtype server_host_name&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;例子: aliasname.example.microsoft.com. AFSDB 1 truename.example.microsoft.com.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3主机信息hinfo&#34;&gt;3.主机信息[HINFO]&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;描述: 用来说明映射到特定 DNS 主机名的 CPU 类型和操作系统类型的 RFC-1700 保留字符串类型，这个信息可以被应用程序通信协议使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法: owner ttl class HINFO cpu_type os_type&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;例子: my-computer-name.example.microsoft.com. HINFO INTEL-386 WIN32&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4邮箱mb&#34;&gt;4.邮箱[MB]&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;描述: 用来将指定的域邮箱名映射到这个邮箱的主机的当前区域中的主机地址记录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法: owner ttl class MB mailbox_hostname&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;例子: mailbox.example.microsoft.com. MB mailhost1.example.microsoft.com&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

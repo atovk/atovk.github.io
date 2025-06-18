@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Delete on ATOVK</title>
+    <link>https://atovk.github.io/categories/delete/</link>
+    <description>Recent content in Delete on ATOVK</description>
+    <image>
+      <title>ATOVK</title>
+      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Sep 2019 14:43:11 +0800</lastBuildDate>
+    <atom:link href="https://atovk.github.io/categories/delete/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>批量删除ES中无效的index / Elasticsearch batch delete indexs</title>
+      <link>https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/</link>
+      <pubDate>Sat, 28 Sep 2019 14:43:11 +0800</pubDate>
+      <guid>https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/</guid>
+      <description>批量自动删除 elasticsearch 中大量无效index</description>
+    </item>
+  </channel>
+</rss>

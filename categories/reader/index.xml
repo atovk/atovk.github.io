@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reader on ATOVK</title>
+    <link>https://atovk.github.io/categories/reader/</link>
+    <description>Recent content in Reader on ATOVK</description>
+    <image>
+      <title>ATOVK</title>
+      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Sep 2019 01:07:07 +0800</lastBuildDate>
+    <atom:link href="https://atovk.github.io/categories/reader/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>书单 / Which books have you read ?</title>
+      <link>https://atovk.github.io/post/books/which_books_have_you_read/</link>
+      <pubDate>Fri, 13 Sep 2019 01:07:07 +0800</pubDate>
+      <guid>https://atovk.github.io/post/books/which_books_have_you_read/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近读了一些书，读的速度太快，导致前两本读了啥内容也不比较模糊，遂之索性把书单和主要内容记录下来，方便以后回忆和查阅。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;201908&#34;&gt;201908&lt;/h2&gt;
+&lt;h3 id=&#34;领导力21法则&#34;&gt;《领导力21法则》&lt;/h3&gt;
+&lt;h3 id=&#34;okr工作法则&#34;&gt;《OKR工作法则》&lt;/h3&gt;
+&lt;h3 id=&#34;斯坦福极简经济学&#34;&gt;《斯坦福极简经济学》&lt;/h3&gt;
+&lt;h3 id=&#34;乌合之众&#34;&gt;《乌合之众》&lt;/h3&gt;
+&lt;h3 id=&#34;人性的弱点&#34;&gt;《人性的弱点》&lt;/h3&gt;
+&lt;h3 id=&#34;java-并发编程的艺术&#34;&gt;《JAVA 并发编程的艺术》&lt;/h3&gt;
+&lt;h2 id=&#34;2011909&#34;&gt;2011909&lt;/h2&gt;
+&lt;h3 id=&#34;解读量化投资&#34;&gt;《解读/量化投资》&lt;/h3&gt;</description>
+    </item>
+  </channel>
+</rss>
