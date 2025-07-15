@@ -84,6 +84,13 @@
 &lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：度中心性是衡量网络中心性的基础方法，通过节点度数和归一化处理可快速评估影响力。但其局限性需结合其他方法改进，以适应复杂网络场景。&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Linux Bond技术详解：7种模式完全指南</title>
+      <link>https://atovk.github.io/post/linux/linux_bond_card/</link>
+      <pubDate>Wed, 15 Jan 2025 22:11:56 +0800</pubDate>
+      <guid>https://atovk.github.io/post/linux/linux_bond_card/</guid>
+      <description>详细解析Linux Bond技术的7种工作模式，包括工作原理、适用场景、交换机要求及完整配置方法，助您选择最适合的网络冗余和负载均衡方案。</description>
+    </item>
+    <item>
       <title>How to diy Metrics in Springboot</title>
       <link>https://atovk.github.io/post/monitor/how-diy-metrics-in-springboot/</link>
       <pubDate>Sat, 11 Jun 2022 21:04:56 +0800</pubDate>
