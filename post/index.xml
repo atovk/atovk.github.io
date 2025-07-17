@@ -91,6 +91,13 @@
       <description>详细解析Linux Bond技术的7种工作模式，包括工作原理、适用场景、交换机要求及完整配置方法，助您选择最适合的网络冗余和负载均衡方案。</description>
     </item>
     <item>
+      <title>AWS Well-Architected Operational Excellence Design Principles | 卓越运营设计原则</title>
+      <link>https://atovk.github.io/post/aws/aws-well-architected-operational-excellence-design-principles/</link>
+      <pubDate>Wed, 19 Jun 2024 21:22:17 +0800</pubDate>
+      <guid>https://atovk.github.io/post/aws/aws-well-architected-operational-excellence-design-principles/</guid>
+      <description>AWS Well-Architected框架卓越运营支柱的5个核心设计原则：基础设施即代码、频繁小步变更、持续优化流程、预期故障处理和从失败中学习。包含中英文对照详解。</description>
+    </item>
+    <item>
       <title>How to diy Metrics in Springboot</title>
       <link>https://atovk.github.io/post/monitor/how-diy-metrics-in-springboot/</link>
       <pubDate>Sat, 11 Jun 2022 21:04:56 +0800</pubDate>
