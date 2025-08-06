@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>架构设计 on ATOVK</title>
+    <link>https://atovk.github.io/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</link>
+    <description>Recent content in 架构设计 on ATOVK</description>
+    <image>
+      <title>ATOVK</title>
+      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Aug 2025 17:02:43 +0800</lastBuildDate>
+    <atom:link href="https://atovk.github.io/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Loop 面试项目案例深度分析</title>
+      <link>https://atovk.github.io/post/aws-loop-project-comprehensive-analysis-revised/</link>
+      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
+      <guid>https://atovk.github.io/post/aws-loop-project-comprehensive-analysis-revised/</guid>
+      <description>基于 STAR-C 法则深度拆解 AWS Loop 面试项目案例，涵盖云原生数据平台架构、AI 智能应用、大数据处理等多个技术领域的实践经验和架构设计思考。</description>
+    </item>
+  </channel>
+</rss>

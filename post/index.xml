@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Mar 2025 01:06:56 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Aug 2025 17:02:43 +0800</lastBuildDate>
     <atom:link href="https://atovk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Loop 面试项目案例深度分析</title>
+      <link>https://atovk.github.io/post/aws-loop-project-comprehensive-analysis-revised/</link>
+      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
+      <guid>https://atovk.github.io/post/aws-loop-project-comprehensive-analysis-revised/</guid>
+      <description>基于 STAR-C 法则深度拆解 AWS Loop 面试项目案例，涵盖云原生数据平台架构、AI 智能应用、大数据处理等多个技术领域的实践经验和架构设计思考。</description>
+    </item>
     <item>
       <title>Network Centrality</title>
       <link>https://atovk.github.io/post/asu/cse598/network_centrality/</link>
