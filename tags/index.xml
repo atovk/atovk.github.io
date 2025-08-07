@@ -11,71 +11,8 @@
     </image>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Aug 2025 17:02:43 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 29 Mar 2025 01:06:56 +0800</lastBuildDate>
     <atom:link href="https://atovk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AI</title>
-      <link>https://atovk.github.io/tags/ai/</link>
-      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
-      <guid>https://atovk.github.io/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Aws</title>
-      <link>https://atovk.github.io/tags/aws/</link>
-      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
-      <guid>https://atovk.github.io/tags/aws/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>云原生</title>
-      <link>https://atovk.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
-      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
-      <guid>https://atovk.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>大数据</title>
-      <link>https://atovk.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</link>
-      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
-      <guid>https://atovk.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>数据平台</title>
-      <link>https://atovk.github.io/tags/%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/</link>
-      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
-      <guid>https://atovk.github.io/tags/%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>机器学习</title>
-      <link>https://atovk.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
-      <guid>https://atovk.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>架构设计</title>
-      <link>https://atovk.github.io/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</link>
-      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
-      <guid>https://atovk.github.io/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>面试</title>
-      <link>https://atovk.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
-      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
-      <guid>https://atovk.github.io/tags/%E9%9D%A2%E8%AF%95/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>项目案例</title>
-      <link>https://atovk.github.io/tags/%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B/</link>
-      <pubDate>Wed, 06 Aug 2025 17:02:43 +0800</pubDate>
-      <guid>https://atovk.github.io/tags/%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Social Media Mining</title>
       <link>https://atovk.github.io/tags/social-media-mining/</link>
@@ -123,6 +60,13 @@
       <link>https://atovk.github.io/tags/automation/</link>
       <pubDate>Wed, 19 Jun 2024 21:22:17 +0800</pubDate>
       <guid>https://atovk.github.io/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aws</title>
+      <link>https://atovk.github.io/tags/aws/</link>
+      <pubDate>Wed, 19 Jun 2024 21:22:17 +0800</pubDate>
+      <guid>https://atovk.github.io/tags/aws/</guid>
       <description></description>
     </item>
     <item>
