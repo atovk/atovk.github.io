@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Mar 2025 01:06:56 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jul 2025 23:32:27 +0800</lastBuildDate>
     <atom:link href="https://atovk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>家庭实验室网络架构设计与搭建指南</title>
+      <link>https://atovk.github.io/post/homelab/homelab-network-architecture-guide/</link>
+      <pubDate>Thu, 17 Jul 2025 23:32:27 +0800</pubDate>
+      <guid>https://atovk.github.io/post/homelab/homelab-network-architecture-guide/</guid>
+      <description>基于PVE的家庭实验室网络架构设计与实施方案，构建简单、安全、可靠的网络环境</description>
+    </item>
     <item>
       <title>Network Centrality</title>
       <link>https://atovk.github.io/post/asu/cse598/network_centrality/</link>
@@ -1367,13 +1374,6 @@
 &lt;ul&gt;
 &lt;li&gt;如果已经存在的库中乱码，手动重设字符编码/删除重建;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://atovk.github.io/post/aws-loop-project-comprehensive-analysis-revised/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://atovk.github.io/post/aws-loop-project-comprehensive-analysis-revised/</guid>
-      <description></description>
     </item>
     <item>
       <title></title>
