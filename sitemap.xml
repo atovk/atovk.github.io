@@ -2,354 +2,368 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://atovk.github.io/</loc>
+    <loc>https://ohoo.dev/</loc>
+    <lastmod>2026-09-20T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ohoo.dev/tags/</loc>
+    <lastmod>2026-09-20T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ohoo.dev/categories/</loc>
+    <lastmod>2026-09-20T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ohoo.dev/about/</loc>
+    <lastmod>2026-09-20T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ohoo.dev/archives/</loc>
+    <lastmod>2026-09-20T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ohoo.dev/post/</loc>
+    <lastmod>2026-09-20T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ohoo.dev/tags/docker/</loc>
     <lastmod>2025-07-17T23:32:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/docker/</loc>
+    <loc>https://ohoo.dev/tags/homelab/</loc>
     <lastmod>2025-07-17T23:32:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/homelab/</loc>
+    <loc>https://ohoo.dev/tags/network/</loc>
     <lastmod>2025-07-17T23:32:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/network/</loc>
+    <loc>https://ohoo.dev/tags/pve/</loc>
     <lastmod>2025-07-17T23:32:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/</loc>
+    <loc>https://ohoo.dev/tags/security/</loc>
     <lastmod>2025-07-17T23:32:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/pve/</loc>
+    <loc>https://ohoo.dev/post/homelab/homelab-network-architecture-guide/</loc>
     <lastmod>2025-07-17T23:32:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/security/</loc>
-    <lastmod>2025-07-17T23:32:27+08:00</lastmod>
-  </url><url>
-    <loc>https://atovk.github.io/tags/</loc>
-    <lastmod>2025-07-17T23:32:27+08:00</lastmod>
-  </url><url>
-    <loc>https://atovk.github.io/post/homelab/homelab-network-architecture-guide/</loc>
-    <lastmod>2025-07-17T23:32:27+08:00</lastmod>
-  </url><url>
-    <loc>https://atovk.github.io/categories/</loc>
+    <loc>https://ohoo.dev/post/asu/cse598/network_centrality/</loc>
     <lastmod>2025-03-29T01:06:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/asu/cse598/network_centrality/</loc>
+    <loc>https://ohoo.dev/categories/social-media-mining/</loc>
     <lastmod>2025-03-29T01:06:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/social-media-mining/</loc>
+    <loc>https://ohoo.dev/tags/social-media-mining/</loc>
     <lastmod>2025-03-29T01:06:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/social-media-mining/</loc>
-    <lastmod>2025-03-29T01:06:56+08:00</lastmod>
-  </url><url>
-    <loc>https://atovk.github.io/tags/bond/</loc>
+    <loc>https://ohoo.dev/tags/bond/</loc>
     <lastmod>2025-01-15T22:11:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/linux/</loc>
+    <loc>https://ohoo.dev/tags/linux/</loc>
     <lastmod>2025-01-15T22:11:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/linux/linux_bond_card/</loc>
+    <loc>https://ohoo.dev/post/linux/linux_bond_card/</loc>
     <lastmod>2025-01-15T22:11:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/networking/</loc>
+    <loc>https://ohoo.dev/tags/networking/</loc>
     <lastmod>2025-01-15T22:11:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</loc>
+    <loc>https://ohoo.dev/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</loc>
     <lastmod>2025-01-15T22:11:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/</loc>
+    <loc>https://ohoo.dev/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/</loc>
     <lastmod>2025-01-15T22:11:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/automation/</loc>
+    <loc>https://ohoo.dev/tags/automation/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/aws/</loc>
+    <loc>https://ohoo.dev/tags/aws/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/aws/</loc>
+    <loc>https://ohoo.dev/categories/aws/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/aws/aws-well-architected-operational-excellence-design-principles/</loc>
+    <loc>https://ohoo.dev/post/aws/aws-well-architected-operational-excellence-design-principles/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/cloud/</loc>
+    <loc>https://ohoo.dev/tags/cloud/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/cloud-computing/</loc>
+    <loc>https://ohoo.dev/categories/cloud-computing/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/devops/</loc>
+    <loc>https://ohoo.dev/tags/devops/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/devops/</loc>
+    <loc>https://ohoo.dev/categories/devops/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/infrastructure-as-code/</loc>
+    <loc>https://ohoo.dev/tags/infrastructure-as-code/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/operational-excellence/</loc>
+    <loc>https://ohoo.dev/tags/operational-excellence/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/well-architected/</loc>
+    <loc>https://ohoo.dev/tags/well-architected/</loc>
     <lastmod>2024-06-19T21:22:17+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/monitor/how-diy-metrics-in-springboot/</loc>
+    <loc>https://ohoo.dev/categories/java/</loc>
     <lastmod>2022-06-11T21:04:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/java/</loc>
+    <loc>https://ohoo.dev/categories/metrics/</loc>
     <lastmod>2022-06-11T21:04:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/metrics/</loc>
+    <loc>https://ohoo.dev/tags/metrics/</loc>
     <lastmod>2022-06-11T21:04:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/metrics/</loc>
+    <loc>https://ohoo.dev/post/monitor/how-diy-metrics-in-springboot/</loc>
     <lastmod>2022-06-11T21:04:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/springboot/</loc>
+    <loc>https://ohoo.dev/categories/springboot/</loc>
     <lastmod>2022-06-11T21:04:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/springboot/</loc>
+    <loc>https://ohoo.dev/tags/springboot/</loc>
     <lastmod>2022-06-11T21:04:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/distributed/</loc>
+    <loc>https://ohoo.dev/categories/distributed/</loc>
     <lastmod>2020-09-05T17:16:03+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/distributed/</loc>
+    <loc>https://ohoo.dev/tags/distributed/</loc>
     <lastmod>2020-09-05T17:16:03+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/distributed-systems/notes-on-distributed-systems-for-young-bloods/</loc>
+    <loc>https://ohoo.dev/post/distributed-systems/notes-on-distributed-systems-for-young-bloods/</loc>
     <lastmod>2020-09-05T17:16:03+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/linux/change_docker_image_mirror_service/</loc>
+    <loc>https://ohoo.dev/categories/docker/</loc>
     <lastmod>2020-07-24T23:29:45+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/docker/</loc>
+    <loc>https://ohoo.dev/post/linux/change_docker_image_mirror_service/</loc>
     <lastmod>2020-07-24T23:29:45+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/linux/docker_rootless/</loc>
+    <loc>https://ohoo.dev/post/linux/docker_rootless/</loc>
     <lastmod>2020-07-18T23:56:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/rootless/</loc>
+    <loc>https://ohoo.dev/tags/rootless/</loc>
     <lastmod>2020-07-18T23:56:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/mysql/manjaro_install_mysql8/</loc>
+    <loc>https://ohoo.dev/categories/manjaro/</loc>
     <lastmod>2020-07-18T14:27:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/manjaro/</loc>
+    <loc>https://ohoo.dev/tags/manjaro/</loc>
     <lastmod>2020-07-18T14:27:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/manjaro/</loc>
+    <loc>https://ohoo.dev/post/mysql/manjaro_install_mysql8/</loc>
     <lastmod>2020-07-18T14:27:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/mysql/</loc>
+    <loc>https://ohoo.dev/categories/mysql/</loc>
     <lastmod>2020-07-18T14:27:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/mysql/</loc>
+    <loc>https://ohoo.dev/tags/mysql/</loc>
     <lastmod>2020-07-18T14:27:27+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/readbook/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</loc>
+    <loc>https://ohoo.dev/post/readbook/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</loc>
     <lastmod>2019-10-05T13:17:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/book/</loc>
+    <loc>https://ohoo.dev/categories/book/</loc>
     <lastmod>2019-10-05T13:17:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/book/</loc>
+    <loc>https://ohoo.dev/tags/book/</loc>
     <lastmod>2019-10-05T13:17:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/kindle/</loc>
+    <loc>https://ohoo.dev/categories/kindle/</loc>
     <lastmod>2019-10-05T13:17:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/kindle/</loc>
+    <loc>https://ohoo.dev/tags/kindle/</loc>
     <lastmod>2019-10-05T13:17:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</loc>
+    <loc>https://ohoo.dev/tags/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</loc>
     <lastmod>2019-10-05T13:17:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/delete/</loc>
+    <loc>https://ohoo.dev/categories/delete/</loc>
     <lastmod>2019-09-28T14:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/delete/</loc>
+    <loc>https://ohoo.dev/tags/delete/</loc>
     <lastmod>2019-09-28T14:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/elasticsearch/</loc>
+    <loc>https://ohoo.dev/categories/elasticsearch/</loc>
     <lastmod>2019-09-28T14:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/elasticsearch/</loc>
+    <loc>https://ohoo.dev/tags/elasticsearch/</loc>
     <lastmod>2019-09-28T14:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/index/</loc>
+    <loc>https://ohoo.dev/categories/index/</loc>
     <lastmod>2019-09-28T14:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/index/</loc>
+    <loc>https://ohoo.dev/tags/index/</loc>
     <lastmod>2019-09-28T14:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/shell/</loc>
+    <loc>https://ohoo.dev/categories/shell/</loc>
     <lastmod>2019-09-28T14:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/shell/</loc>
+    <loc>https://ohoo.dev/tags/shell/</loc>
     <lastmod>2019-09-28T14:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/bigdata/elasticsearch_batch_delete_indexs/</loc>
+    <loc>https://ohoo.dev/post/bigdata/elasticsearch_batch_delete_indexs/</loc>
     <lastmod>2019-09-28T14:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/crontab/</loc>
+    <loc>https://ohoo.dev/categories/crontab/</loc>
     <lastmod>2019-09-27T23:11:55+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/crontab/</loc>
+    <loc>https://ohoo.dev/tags/crontab/</loc>
     <lastmod>2019-09-27T23:11:55+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/linux/</loc>
+    <loc>https://ohoo.dev/categories/linux/</loc>
     <lastmod>2019-09-27T23:11:55+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/linux/linux_ctontab_timely_operational/</loc>
+    <loc>https://ohoo.dev/post/linux/linux_ctontab_timely_operational/</loc>
     <lastmod>2019-09-27T23:11:55+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/bigdate/</loc>
+    <loc>https://ohoo.dev/categories/bigdate/</loc>
     <lastmod>2019-09-27T22:58:35+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/bigdate/</loc>
+    <loc>https://ohoo.dev/tags/bigdate/</loc>
     <lastmod>2019-09-27T22:58:35+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/kudu/</loc>
+    <loc>https://ohoo.dev/categories/kudu/</loc>
     <lastmod>2019-09-27T22:58:35+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/kudu/</loc>
+    <loc>https://ohoo.dev/tags/kudu/</loc>
     <lastmod>2019-09-27T22:58:35+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/bigdata/kudu_table_schema_design/</loc>
+    <loc>https://ohoo.dev/post/bigdata/kudu_table_schema_design/</loc>
     <lastmod>2019-09-27T22:58:35+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/table/</loc>
+    <loc>https://ohoo.dev/categories/table/</loc>
     <lastmod>2019-09-27T22:58:35+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/table/</loc>
+    <loc>https://ohoo.dev/tags/table/</loc>
     <lastmod>2019-09-27T22:58:35+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/java/</loc>
+    <loc>https://ohoo.dev/tags/java/</loc>
     <lastmod>2019-09-27T22:42:49+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/java/oshi_system_and_hardware_information/</loc>
+    <loc>https://ohoo.dev/post/java/oshi_system_and_hardware_information/</loc>
     <lastmod>2019-09-27T22:42:49+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/monitor/</loc>
+    <loc>https://ohoo.dev/categories/monitor/</loc>
     <lastmod>2019-09-27T22:42:49+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/monitor/</loc>
+    <loc>https://ohoo.dev/tags/monitor/</loc>
     <lastmod>2019-09-27T22:42:49+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/database/</loc>
+    <loc>https://ohoo.dev/categories/database/</loc>
     <lastmod>2019-09-13T02:37:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/database/</loc>
+    <loc>https://ohoo.dev/tags/database/</loc>
     <lastmod>2019-09-13T02:37:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/jdbc/</loc>
+    <loc>https://ohoo.dev/categories/jdbc/</loc>
     <lastmod>2019-09-13T02:37:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/jdbc/</loc>
+    <loc>https://ohoo.dev/tags/jdbc/</loc>
     <lastmod>2019-09-13T02:37:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/java/java_jdbc_example_holder/</loc>
+    <loc>https://ohoo.dev/post/java/java_jdbc_example_holder/</loc>
     <lastmod>2019-09-13T02:37:24+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/hot-key/</loc>
+    <loc>https://ohoo.dev/tags/hot-key/</loc>
     <lastmod>2019-09-13T02:20:08+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/linux/linux_teminal_option/</loc>
+    <loc>https://ohoo.dev/post/linux/linux_teminal_option/</loc>
     <lastmod>2019-09-13T02:20:08+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/terminal/</loc>
+    <loc>https://ohoo.dev/categories/terminal/</loc>
     <lastmod>2019-09-13T02:20:08+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/terminal/</loc>
+    <loc>https://ohoo.dev/tags/terminal/</loc>
     <lastmod>2019-09-13T02:20:08+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <loc>https://ohoo.dev/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2019-09-13T02:20:08+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/dns/</loc>
+    <loc>https://ohoo.dev/categories/dns/</loc>
     <lastmod>2019-09-13T02:04:31+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/dns/</loc>
+    <loc>https://ohoo.dev/tags/dns/</loc>
     <lastmod>2019-09-13T02:04:31+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/domain/</loc>
+    <loc>https://ohoo.dev/tags/domain/</loc>
     <lastmod>2019-09-13T02:04:31+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/linux/domain_dns_info_detail/</loc>
+    <loc>https://ohoo.dev/post/linux/domain_dns_info_detail/</loc>
     <lastmod>2019-09-13T02:04:31+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/error/</loc>
+    <loc>https://ohoo.dev/tags/error/</loc>
     <lastmod>2019-09-13T01:42:46+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/mac/fix_mac_application_cannot_open/</loc>
+    <loc>https://ohoo.dev/categories/macos/</loc>
     <lastmod>2019-09-13T01:42:46+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/macos/</loc>
+    <loc>https://ohoo.dev/tags/macos/</loc>
     <lastmod>2019-09-13T01:42:46+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/macos/</loc>
+    <loc>https://ohoo.dev/post/mac/fix_mac_application_cannot_open/</loc>
     <lastmod>2019-09-13T01:42:46+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/books/</loc>
+    <loc>https://ohoo.dev/categories/books/</loc>
     <lastmod>2019-09-13T01:07:07+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/books/</loc>
+    <loc>https://ohoo.dev/tags/books/</loc>
     <lastmod>2019-09-13T01:07:07+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/list/</loc>
+    <loc>https://ohoo.dev/tags/list/</loc>
     <lastmod>2019-09-13T01:07:07+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/reader/</loc>
+    <loc>https://ohoo.dev/categories/reader/</loc>
     <lastmod>2019-09-13T01:07:07+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/books/which_books_have_you_read/</loc>
+    <loc>https://ohoo.dev/post/books/which_books_have_you_read/</loc>
     <lastmod>2019-09-13T01:07:07+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/shortcuts-cheatsheet/</loc>
+    <loc>https://ohoo.dev/tags/shortcuts-cheatsheet/</loc>
     <lastmod>2019-05-31T23:50:26+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/vim/</loc>
+    <loc>https://ohoo.dev/categories/vim/</loc>
     <lastmod>2019-05-31T23:50:26+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/vim/</loc>
+    <loc>https://ohoo.dev/tags/vim/</loc>
     <lastmod>2019-05-31T23:50:26+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/linux/vim-keyboard-shortcuts-cheatsheet/</loc>
+    <loc>https://ohoo.dev/post/linux/vim-keyboard-shortcuts-cheatsheet/</loc>
     <lastmod>2019-05-31T23:50:26+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/bigdata/</loc>
+    <loc>https://ohoo.dev/categories/bigdata/</loc>
     <lastmod>2019-05-31T23:46:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/bigdata/</loc>
+    <loc>https://ohoo.dev/tags/bigdata/</loc>
     <lastmod>2019-05-31T23:46:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/hdfs/</loc>
+    <loc>https://ohoo.dev/categories/hdfs/</loc>
     <lastmod>2019-05-31T23:46:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/hdfs/</loc>
+    <loc>https://ohoo.dev/tags/hdfs/</loc>
     <lastmod>2019-05-31T23:46:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/bigdata/batch_delete_hdfs_dir/</loc>
+    <loc>https://ohoo.dev/post/bigdata/batch_delete_hdfs_dir/</loc>
     <lastmod>2019-05-31T23:46:56+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/2018/</loc>
+    <loc>https://ohoo.dev/categories/2018/</loc>
     <lastmod>2019-01-20T00:52:59+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/2018/</loc>
+    <loc>https://ohoo.dev/tags/2018/</loc>
     <lastmod>2019-01-20T00:52:59+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/summary/2018-summary/</loc>
+    <loc>https://ohoo.dev/post/summary/2018-summary/</loc>
     <lastmod>2019-01-20T00:52:59+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/mysql/modify_ubuntu18_mysql_default_character_to_utf8/</loc>
+    <loc>https://ohoo.dev/post/mysql/modify_ubuntu18_mysql_default_character_to_utf8/</loc>
     <lastmod>2019-01-20T00:52:59+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://ohoo.dev/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2019-01-20T00:52:59+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://ohoo.dev/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2019-01-20T00:52:59+08:00</lastmod>
   </url><url>
-    <loc>https://atovk.github.io/post/redis/%E8%A7%A3%E9%94%81%E6%AD%A3%E7%A1%AE%E7%9A%84%E7%BC%93%E5%AD%98%E5%A7%BF%E5%8A%BF/</loc>
+    <loc>https://ohoo.dev/categories/cache/</loc>
+  </url><url>
+    <loc>https://ohoo.dev/tags/cache/</loc>
+  </url><url>
+    <loc>https://ohoo.dev/categories/redis/</loc>
+  </url><url>
+    <loc>https://ohoo.dev/tags/redis/</loc>
+  </url><url>
+    <loc>https://ohoo.dev/post/redis/%E8%A7%A3%E9%94%81%E6%AD%A3%E7%A1%AE%E7%9A%84%E7%BC%93%E5%AD%98%E5%A7%BF%E5%8A%BF/</loc>
   </url>
 </urlset>

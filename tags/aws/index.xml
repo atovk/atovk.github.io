@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Aws on ATOVK</title>
-    <link>https://atovk.github.io/tags/aws/</link>
-    <description>Recent content in Aws on ATOVK</description>
+    <title>Aws on ohoo.dev</title>
+    <link>https://ohoo.dev/tags/aws/</link>
+    <description>Recent content in Aws on ohoo.dev</description>
     <image>
-      <title>ATOVK</title>
-      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>ohoo.dev</title>
+      <url>https://ohoo.dev/images/social-card.png</url>
+      <link>https://ohoo.dev/images/social-card.png</link>
     </image>
     <generator>Hugo -- 0.147.8</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Wed, 19 Jun 2024 21:22:17 +0800</lastBuildDate>
-    <atom:link href="https://atovk.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohoo.dev/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS Well-Architected Operational Excellence Design Principles | 卓越运营设计原则</title>
-      <link>https://atovk.github.io/post/aws/aws-well-architected-operational-excellence-design-principles/</link>
+      <link>https://ohoo.dev/post/aws/aws-well-architected-operational-excellence-design-principles/</link>
       <pubDate>Wed, 19 Jun 2024 21:22:17 +0800</pubDate>
-      <guid>https://atovk.github.io/post/aws/aws-well-architected-operational-excellence-design-principles/</guid>
-      <description>AWS Well-Architected框架卓越运营支柱的5个核心设计原则：基础设施即代码、频繁小步变更、持续优化流程、预期故障处理和从失败中学习。包含中英文对照详解。</description>
+      <guid>https://ohoo.dev/post/aws/aws-well-architected-operational-excellence-design-principles/</guid>
+      <description>AWS Well-Architected卓越运营支柱笔记，整理运维即代码、小步变更、预期故障和复盘改进原则。</description>
     </item>
   </channel>
 </rss>

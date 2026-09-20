@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cache on ohoo.dev</title>
+    <link>https://ohoo.dev/tags/cache/</link>
+    <description>Recent content in Cache on ohoo.dev</description>
+    <image>
+      <title>ohoo.dev</title>
+      <url>https://ohoo.dev/images/social-card.png</url>
+      <link>https://ohoo.dev/images/social-card.png</link>
+    </image>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>zh-CN</language>
+    <atom:link href="https://ohoo.dev/tags/cache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解锁正确的缓存姿势</title>
+      <link>https://ohoo.dev/post/redis/%E8%A7%A3%E9%94%81%E6%AD%A3%E7%A1%AE%E7%9A%84%E7%BC%93%E5%AD%98%E5%A7%BF%E5%8A%BF/</link>
+      
+      <guid>https://ohoo.dev/post/redis/%E8%A7%A3%E9%94%81%E6%AD%A3%E7%A1%AE%E7%9A%84%E7%BC%93%E5%AD%98%E5%A7%BF%E5%8A%BF/</guid>
+      <description>缓存实践整理，介绍命中、失效、污染、缓存穿透、击穿、雪崩和常见处理思路。</description>
+    </item>
+  </channel>
+</rss>

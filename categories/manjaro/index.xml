@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Manjaro on ATOVK</title>
-    <link>https://atovk.github.io/categories/manjaro/</link>
-    <description>Recent content in Manjaro on ATOVK</description>
+    <title>Manjaro on ohoo.dev</title>
+    <link>https://ohoo.dev/categories/manjaro/</link>
+    <description>Recent content in Manjaro on ohoo.dev</description>
     <image>
-      <title>ATOVK</title>
-      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>ohoo.dev</title>
+      <url>https://ohoo.dev/images/social-card.png</url>
+      <link>https://ohoo.dev/images/social-card.png</link>
     </image>
     <generator>Hugo -- 0.147.8</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 18 Jul 2020 14:27:27 +0800</lastBuildDate>
-    <atom:link href="https://atovk.github.io/categories/manjaro/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohoo.dev/categories/manjaro/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>In manjaro linux to install mysql 8.*</title>
-      <link>https://atovk.github.io/post/mysql/manjaro_install_mysql8/</link>
+      <title>Manjaro Linux 安装 MySQL 8</title>
+      <link>https://ohoo.dev/post/mysql/manjaro_install_mysql8/</link>
       <pubDate>Sat, 18 Jul 2020 14:27:27 +0800</pubDate>
-      <guid>https://atovk.github.io/post/mysql/manjaro_install_mysql8/</guid>
-      <description>eazy install mysql from manjaro</description>
+      <guid>https://ohoo.dev/post/mysql/manjaro_install_mysql8/</guid>
+      <description>记录在 Manjaro Linux 上通过 pacman 安装 MySQL 8、初始化密码并启动服务的基础步骤。</description>
     </item>
   </channel>
 </rss>

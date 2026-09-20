@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Metrics on ATOVK</title>
-    <link>https://atovk.github.io/categories/metrics/</link>
-    <description>Recent content in Metrics on ATOVK</description>
+    <title>Metrics on ohoo.dev</title>
+    <link>https://ohoo.dev/categories/metrics/</link>
+    <description>Recent content in Metrics on ohoo.dev</description>
     <image>
-      <title>ATOVK</title>
-      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>ohoo.dev</title>
+      <url>https://ohoo.dev/images/social-card.png</url>
+      <link>https://ohoo.dev/images/social-card.png</link>
     </image>
     <generator>Hugo -- 0.147.8</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 11 Jun 2022 21:04:56 +0800</lastBuildDate>
-    <atom:link href="https://atovk.github.io/categories/metrics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohoo.dev/categories/metrics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to diy Metrics in Springboot</title>
-      <link>https://atovk.github.io/post/monitor/how-diy-metrics-in-springboot/</link>
+      <title>Spring Boot 自定义 Metrics 笔记</title>
+      <link>https://ohoo.dev/post/monitor/how-diy-metrics-in-springboot/</link>
       <pubDate>Sat, 11 Jun 2022 21:04:56 +0800</pubDate>
-      <guid>https://atovk.github.io/post/monitor/how-diy-metrics-in-springboot/</guid>
-      <description>How to diy Metrics in Springboot/如何在springboot中自定义metrics</description>
+      <guid>https://ohoo.dev/post/monitor/how-diy-metrics-in-springboot/</guid>
+      <description>这篇目前是 Spring Boot 自定义 Metrics 的开坑笔记，仅保留后续补充监控指标实践的入口。</description>
     </item>
   </channel>
 </rss>

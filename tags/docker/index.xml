@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Docker on ATOVK</title>
-    <link>https://atovk.github.io/tags/docker/</link>
-    <description>Recent content in Docker on ATOVK</description>
+    <title>Docker on ohoo.dev</title>
+    <link>https://ohoo.dev/tags/docker/</link>
+    <description>Recent content in Docker on ohoo.dev</description>
     <image>
-      <title>ATOVK</title>
-      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>ohoo.dev</title>
+      <url>https://ohoo.dev/images/social-card.png</url>
+      <link>https://ohoo.dev/images/social-card.png</link>
     </image>
     <generator>Hugo -- 0.147.8</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Thu, 17 Jul 2025 23:32:27 +0800</lastBuildDate>
-    <atom:link href="https://atovk.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohoo.dev/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>家庭实验室网络架构设计与搭建指南</title>
-      <link>https://atovk.github.io/post/homelab/homelab-network-architecture-guide/</link>
+      <link>https://ohoo.dev/post/homelab/homelab-network-architecture-guide/</link>
       <pubDate>Thu, 17 Jul 2025 23:32:27 +0800</pubDate>
-      <guid>https://atovk.github.io/post/homelab/homelab-network-architecture-guide/</guid>
-      <description>基于PVE的家庭实验室网络架构设计与实施方案，构建简单、安全、可靠的网络环境</description>
+      <guid>https://ohoo.dev/post/homelab/homelab-network-architecture-guide/</guid>
+      <description>基于 PVE 的家庭实验室网络架构指南，覆盖网段划分、安全策略、容器部署和服务隔离。</description>
     </item>
     <item>
-      <title>Change docker image mirror service</title>
-      <link>https://atovk.github.io/post/linux/change_docker_image_mirror_service/</link>
+      <title>Docker 镜像加速配置 / Change Docker image mirror service</title>
+      <link>https://ohoo.dev/post/linux/change_docker_image_mirror_service/</link>
       <pubDate>Fri, 24 Jul 2020 23:29:45 +0800</pubDate>
-      <guid>https://atovk.github.io/post/linux/change_docker_image_mirror_service/</guid>
-      <description>for china mainland docker user change mirror service config</description>
+      <guid>https://ohoo.dev/post/linux/change_docker_image_mirror_service/</guid>
+      <description>记录为中国大陆 Docker 环境配置 daemon.json 镜像加速地址的简短操作步骤。</description>
     </item>
     <item>
-      <title>Docker rootless</title>
-      <link>https://atovk.github.io/post/linux/docker_rootless/</link>
+      <title>Docker Rootless 安装笔记</title>
+      <link>https://ohoo.dev/post/linux/docker_rootless/</link>
       <pubDate>Sat, 18 Jul 2020 23:56:24 +0800</pubDate>
-      <guid>https://atovk.github.io/post/linux/docker_rootless/</guid>
-      <description>rootless docker</description>
+      <guid>https://ohoo.dev/post/linux/docker_rootless/</guid>
+      <description>记录 Docker Rootless 模式的官方安装脚本、subuid/subgid 配置和常见启动检查命令。</description>
     </item>
   </channel>
 </rss>

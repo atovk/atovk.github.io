@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Book on ATOVK</title>
-    <link>https://atovk.github.io/categories/book/</link>
-    <description>Recent content in Book on ATOVK</description>
+    <title>Book on ohoo.dev</title>
+    <link>https://ohoo.dev/categories/book/</link>
+    <description>Recent content in Book on ohoo.dev</description>
     <image>
-      <title>ATOVK</title>
-      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>ohoo.dev</title>
+      <url>https://ohoo.dev/images/social-card.png</url>
+      <link>https://ohoo.dev/images/social-card.png</link>
     </image>
     <generator>Hugo -- 0.147.8</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 05 Oct 2019 13:17:24 +0800</lastBuildDate>
-    <atom:link href="https://atovk.github.io/categories/book/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohoo.dev/categories/book/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《人性的弱点》</title>
-      <link>https://atovk.github.io/post/readbook/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</link>
+      <link>https://ohoo.dev/post/readbook/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</link>
       <pubDate>Sat, 05 Oct 2019 13:17:24 +0800</pubDate>
-      <guid>https://atovk.github.io/post/readbook/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</guid>
-      <description>人性的弱点书中节选</description>
+      <guid>https://ohoo.dev/post/readbook/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</guid>
+      <description>《人性的弱点》阅读摘录，记录与人相处、赢得认同、影响他人和家庭沟通相关语句。</description>
     </item>
   </channel>
 </rss>

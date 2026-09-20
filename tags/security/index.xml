@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Security on ATOVK</title>
-    <link>https://atovk.github.io/tags/security/</link>
-    <description>Recent content in Security on ATOVK</description>
+    <title>Security on ohoo.dev</title>
+    <link>https://ohoo.dev/tags/security/</link>
+    <description>Recent content in Security on ohoo.dev</description>
     <image>
-      <title>ATOVK</title>
-      <url>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://atovk.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>ohoo.dev</title>
+      <url>https://ohoo.dev/images/social-card.png</url>
+      <link>https://ohoo.dev/images/social-card.png</link>
     </image>
     <generator>Hugo -- 0.147.8</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Thu, 17 Jul 2025 23:32:27 +0800</lastBuildDate>
-    <atom:link href="https://atovk.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohoo.dev/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>家庭实验室网络架构设计与搭建指南</title>
-      <link>https://atovk.github.io/post/homelab/homelab-network-architecture-guide/</link>
+      <link>https://ohoo.dev/post/homelab/homelab-network-architecture-guide/</link>
       <pubDate>Thu, 17 Jul 2025 23:32:27 +0800</pubDate>
-      <guid>https://atovk.github.io/post/homelab/homelab-network-architecture-guide/</guid>
-      <description>基于PVE的家庭实验室网络架构设计与实施方案，构建简单、安全、可靠的网络环境</description>
+      <guid>https://ohoo.dev/post/homelab/homelab-network-architecture-guide/</guid>
+      <description>基于 PVE 的家庭实验室网络架构指南，覆盖网段划分、安全策略、容器部署和服务隔离。</description>
     </item>
   </channel>
 </rss>
